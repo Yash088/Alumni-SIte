@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- AOS Script -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+        <script>
+                AOS.init({
+                    duration:2000
+                });
+            </script>
+    <!-- Navbar -->
+    <div class="uk-navbar " style="background-color: #173180;" uk-sticky="top;">
+        <img src="logo.jpeg" height="120px" width="120px" style="float: left;">
+        <span class=" uk-animation-fade  uk-align-center uk-heading-small" style="color: white;">Amity University
+            Rajasthan</span>
+        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+            style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-active"><a href="#">About Us</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Login</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Message from VC</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Feedback</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Contact Us</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Job Openings</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Photo Gallery</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Events invite notice</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">News Room</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a href="#">Group Members</a></li>
+                    <li class="uk-nav-divider"></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide Show -->
+    <div class="uk-position-relative uk-visible-toggle uk-light"
+        uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push" tabindex="-1">
+
+        <ul class="uk-slideshow-items">
+            <li>
+                <img src="img1.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <!-- <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline uk-cover></video> -->
+                <img src="i2.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <!-- <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-cover></iframe> -->
+                <img src="i3.jpg" alt="" uk-cover>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slideshow-item="next"></a>
+
+    </div>
+
+    <!-- Group Members -->
+    <h1 class="uk-text-center uk-animation-fade"><span>Group Members</span></h1>
+    <hr class="uk-divider-small" style="margin-left:650px;">
+
+    <div class="uk-flex uk-flex-wrap uk-child-width-1-3"
+        uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500;repeat: true;">
+        <div class="uk-align-center">
+            <div class="uk-card uk-card-body uk-align-centers uk-box-shadow-hover-small">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-body uk-box-shadow-hover-small">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
+                <img class="uk-border-circle"
+                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
+                    width="200" height="200" alt="Border circle">
+                <div class="uk-card uk-card-body">
+                    <h3 class="uk-card-title">nx jasnx</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class=" uk-text-center uk-animation-fade "><span>Success Stories</span></h1>
+    <hr class="uk-divider-small" style="margin-left:650px;">
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid data-aos="fade-right;">
+        <!-- uk-scrollspy="cls: uk-animation-slide-top; repeat: true" -->
+        <div class="uk-card-media-left uk-cover-container uk-animation-top">
+            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div class="uk-card-body" data-aos="fade-right">
+            <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
+            <h3 class="uk-card-title">Media Left</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+    </div>
+    </div>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid data-aos="fade-right">
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body uk-animation-slide-left">
+                <h3 class="uk-card-title">Media Right</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+        uk-scrollspy="cls:uk-animation-slide-right; repeat:true;" uk-grid>
+        <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
+        <div class="uk-card-media-left uk-cover-container">
+            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body uk-animation-slide-right ">
+                <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
+                <h3 class="uk-card-title ">Media Left</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="uk-section uk-section-secondary uk-light" >
+        <div>
+            <div class="uk-align-left">
+                <h3 class="uk-margin-left">Footer</h3>
+            </div>
+            <div class="uk-align-right" data-aos="zoom-in">
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
+                <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
