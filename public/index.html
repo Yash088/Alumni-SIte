@@ -15,11 +15,34 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="cout_page.css" rel="stylesheet" type="text/css">
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <style>
+.ERT{
+    animation: mymove 12s infinite;
 
+}
+@keyframes mymove{
+0%{
+    background-image:url('https://amity.edu/images/logo.png');
+}
+25%{
+    background-image:url('Images/img1.jpg');
+}
+50%{
+
+    background-image:url('Images/i1.jpg');
+}
+75%{
+
+    background-image:url('Images/i2.jpg');
+}
+100%{
+
+    background-image:url('https://amity.edu/images/logo.png');
+}
+}
 </style>
 </head>
 
@@ -249,37 +272,16 @@
 
     <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:5%;">Success Stories  <hr class="uk-divider-small" ></h3>
     
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" style="margin-top:5%;" uk-grid data-aos="fade-right;">
-        <!-- uk-scrollspy="cls: uk-animation-slide-top; repeat: true" -->
-        <div class="uk-card-media-left uk-cover-container uk-animation-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div class="uk-card-body" data-aos="fade-right">
-            <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
-            <h3 class="uk-card-title">Media Left</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-    </div>
-    </div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid data-aos="fade-right">
-        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
-            <div class="uk-card-body uk-animation-slide-left">
-                <h3 class="uk-card-title">Media Right</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-        </div>
-    </div>
+    
+     <div class="uk-position-relative uk-visible-toggle uk-light"  
+    uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
 
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top"
-        uk-scrollspy="cls:uk-animation-slide-right; repeat:true;" uk-grid>
+    <ul class="uk-slideshow-items ">
+        <li>
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
         <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
         <div class="uk-card-media-left uk-cover-container">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+            <img src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
         </div>
         <div>
@@ -290,24 +292,79 @@
             </div>
         </div>
     </div>
+        </li>
+        <li>
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
+            <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80 " alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body uk-animation-slide-right ">
+                    <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
+                    <h3 class="uk-card-title ">Media Left</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+            </div>
+        </div>
+        </li>
+        <li>
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid ">
+                <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                    <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+                    <canvas width="600" height="400"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body uk-animation-slide-left">
+                        <h3 class="uk-card-title">Media Right</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#" uk-slidenav-previous
+        uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover "href="#"  style="color:black;"uk-slidenav-next
+        uk-slideshow-item="next"></a>
+
+</div>
+
 
     <!-- Footer -->
     <div class="uk-section uk-section-secondary uk-light" >
-        <div>
-            <div class="uk-align-left">
-                <h3 class="uk-margin-left">Footer</h3>
+        <div uk-grid>
+            <div class="uk-align-left uk-margin-top">
+               <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+
             </div>
-            <div class="uk-align-right" data-aos="zoom-in">
+           <div>
+          <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+            <ul style="list-style-type: none; " class="uk-margin-top">
+                
+                <li style="float:left; font-family: Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left">Alumni</li>
+                <li style="float:left;font-family: Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="uk-margin-left">Gallery</li>
+                <li style="float:left;font-family: Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left">Events</li>
+                <li style="float:left;font-family: Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left" >Stories</li>
+                <li style="float:left;font-family: Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="uk-margin-left">Dashboard</li>
+            </ul>
+            </div>
+
+           
+           
+             <div class = "uk-align-right uk-margin-top" data-aos="zoom-in" >
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
                 <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
-            </div>
+            </div> 
         </div>
     </div>
-    </div>
+
 </body>
 
 </html>
