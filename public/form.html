@@ -1,188 +1,414 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HOME</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Satisfy&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker|Satisfy&display=swap"
-        rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
-        rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
 
-    <title>Document</title>
+
 </head>
-
-<body>
-
-
-    <div id="my_id" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title uk-text-center">Registration Form</h2>
-            <form class="uk-grid-small" uk-grid>
-
-
-                <form class="uk-grid-small uk-margin-large-top" uk-grid>
-
- <!-- leave this for at the moment -->
-                    <div class="uk-flex uk-flex-column uk-align-center" uk-form-custom>
-                        <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png"
-                            class="uk-width-small uk-height-small" uk-img>
-
-                        <input type="file">
-                        <button class="uk-button uk-button-primary uk-margin-large-top" type="button">Upload</button>
-                    </div>
-
-                    <!-- Number authentication alphanumeric value maybe check for the length -->
-                    <div class="uk-width-1-1@s">
-                        <input class="uk-input" placeholder="Aur ID">
-                    </div>
-                    <!-- only for alpha value -->
-
-                    <div class="uk-width-1-2@s uk-form-controls">
-
-                        <input class="uk-input" placeholder="Name">
-                    </div>
-
-                    <!-- leave it for rigth noww i have code that is made for it -->
-                    <div class="uk-width-1-2@s uk-form-controls">
-                        <input type="tel" class="uk-input" value="+91"placeholder="Phone Number">
-
-                    </div>
-
-                        <!-- check for this also  -->
-                    <div class="uk-width-1-3@s">
-                        <select class="uk-select" id="form-horizontal-select" required>
-                            <option>Course</option>
-                            <option>Amity School Of Engeering and technology</option>
-                            <option>BHM</option>
-                            <option>Biotech</option>
-                            <option>Amity School Of Hospitality</option>
-                            <option>Amity School Of lAw</option>
-                            <option>BHM</option>
-                        </select>
-                    </div>
-
-                    <!-- only check that it is not empty and the year gap should be equal to  4 -->
-                    <div class="uk-width-1-3@s">
-                        <input class="uk-input" type="text" placeholder="Year" id="year">
-                    </div>
-
-
-                    <!-- depends on you -->
-                    <div class="uk-width-1-3@s">
-                        <input class="uk-input" type="text" placeholder="Date Of Birth" id="dob">
-                    </div>
-
-
-                    <!-- E-mail auth -->
-                    <div class="uk-width-1-2@s">
-                        <input class="uk-input" type="text" placeholder="E-mail Personal">
-
-                    </div>
-
-
-                    <!-- e-mail auth -->
-                    <div class="uk-width-1-2@s">
-                        <input class="uk-input" type="text" placeholder="E-mail Official">
-                    </div>
-
-
-
-
-                    <div class="uk-width-1-2@s">
-                        <input class="uk-input" type="text" placeholder="Linkedin Id">
-
-                    </div>
-
-
-
-                    <div class="uk-width-1-2@s">
-                        <input class="uk-input" type="text" placeholder="Skype Id">
-                    </div>
-
-                    
-                    
-                    <div class="uk-width-1-3@s">
-                        <input class="uk-input" type="text" placeholder="Current Company...">
-
-                    </div>
-
-
-
-                    <div class="uk-width-1-3@s">
-                        <input class="uk-input" type="text" placeholder="Designation">
-                    </div>
-
-
-                    <div class="uk-width-1-3@s">
-                        <input class="uk-input" type="text" placeholder="location">
-                    </div>
-
-                    <div class="uk-width-1-1@s">
-                        <input class="uk-input" type="text" placeholder="Address Of Communication">
-                    </div>
-                    <div class="uk-align-center">
-
-                        <button type="button" class="uk-button uk-button-primary">Sumbit</button>
-                    </div>
-        </div>
-    </div>
-
-    </form>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-
+<body style="background-image: url('Images/back.jpg');background-repeat: no-repeat;">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+     https://firebase.google.com/docs/web/setup#config-web-app -->
 
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyD0lotM6kyH6o8wcDx-RjLcuVNvGAWKTVE",
-    authDomain: "alumni-24c48.firebaseapp.com",
-    databaseURL: "https://alumni-24c48.firebaseio.com",
-    projectId: "alumni-24c48",
-    storageBucket: "alumni-24c48.appspot.com",
-    messagingSenderId: "734371845562",
-    appId: "1:734371845562:web:5fc4bd8fa9fec40d6cf983"
+    apiKey: "AIzaSyCyOkWpaP0k9X5OpmTPsRgwynnvhHpnQs4",
+    authDomain: "allumini-4019b.firebaseapp.com",
+    databaseURL: "https://allumini-4019b.firebaseio.com",
+    projectId: "allumini-4019b",
+    storageBucket: "",
+    messagingSenderId: "133124851464",
+    appId: "1:133124851464:web:80a30d8f8fe648b4ce4ebd"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
-    <script type="text/javascript">
-        var modal = UIkit.modal("#my_id");
-        modal.show();
 
-        $(document).ready(function () {
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="nav" style="background-color: #0000b3;">
+<div class="a">
+  <h4 class="navbar-brand" href="#" style="color: black;"><img src="logo.jpg"id="image">AMITY UNIVERSITY</h4>
+</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color: white;">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white;">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: white;">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#" >Action</a>
+          <a class="dropdown-item" href="#" >Another action</a>
+          <a class="dropdown-item" href="#" >Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<div>
+  <div  style="background-color:#153373; border:1px solid transparent;height:40px;">
+      <ul style="list-style-type: none;padding:5px;">
+          <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+          <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+          
+         
+      </ul>
+      
+  </div>
+  <nav class=" uk-navbar-container" style="height:70px;"uk-navbar>
+          <div class=" uk-navbar-left uk-width-1-2" >
+                  <ul class="uk-navbar-nav">
+          <li style="width:300px;" >
+              <a style="color:#1a275b !important;">About Us</a></li>
+          <li><a style="color:#1a275b !important;">Events</a></li>
+      </ul>
+      </div>
+      <div class="uk-navbar-center uk-margin-large-right " style="margin-top:-16px;">
 
-            $("#year").datepicker({
-                minViewMode: 2,
-                format: 'yyyy'
-            });
-            $("#dob").datepicker({
-                minViewMode: 4,
-                format: 'dd/m/yyyy'
-            });
-        })
-        //validation for Form 
-    </script>
+      
+                  <li style="list-style-type: none;margin-right:150px;" >              
+                      <img src="Images/logo.jpeg" height="120px" width="120px" style="z-index: -1;"class="uk-box-shadow-large" >
+                  </li>
+               
+      </div>
+                  <div class=" uk-navbar-right uk-width-1-2" >
+                          <ul class="uk-navbar-nav">
+                  <li style=" width:300px;" >
+                      <a style="color:#1a275b !important;">Alumni Stories</a></li>
+                  <li style="width:300px;"><a style="color:#1a275b !important;">Gallery</a></li>
+              </ul>
+              </div>
+          </nav>
+</div>
+<div class="b">
+<div class="container" >
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-5">
+      <div class="card cardbox">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+
+          <!-- socail media group -->
+          <div class="social-buttons">
+            <a href="#" class="btn btn-md btn-block btn-fb"><i class="fa fa-facebook" id="facebook"></i> Facebook</a>
+            <a href="#" class="btn btn-md btn-block btn-gplus" style="background-color:#ff2a26;color: white;" onclick="myFun()"><i class="fa fa-google" ></i> Google</a>
+          </div>
+
+          <div class="login-or">
+            <hr class="hr-or">
+            <span class="span-or">or</span>
+          </div>
+
+          <div class="form-group">
+
+            <form id="login-nav" method="post" role="form" class="form" accept-charset="UTF-8">
+
+              <div class="form-group">
+                <label class="sr-only">Username</label>
+                <input type="text" id="reg_username" name="user_name" class="form-control"
+                       value="" placeholder="Username" required>
+              </div>
+
+              <!-- password group -->
+              <div class="form-group">
+
+                <!-- password label -->
+                <label class="sr-only">Password</label>
+                <!-- password input -->
+                <div class="input-group">
+                  <input type="password" id="reg_userpassword" name="user_password" class="form-control" data-placement="bottom" data-toggle="popover" data-container="body"
+                         data-html="true" value="" placeholder="Password" required>
+
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-append1" onclick="togglePassword()">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- password remember & results -->
+                <div class="help-block text-right">
+                  <small><a href="#">Forgot Password</a></small>
+                </div>       
+    
+
+              </div>
+
+
+              <!-- Submit -->
+              <div class="form-group">
+                <button id="reg_submit" name="submit" value="1" disabled="disabled" class="btn btn-block btn-primary">Login</button>
+              </div>
+
+              <!-- Remember -->
+              <div class="form-check">
+                <input type="checkbox" id="reg_remember" name="user_remember" class="form-check-input" value="1">
+                <label class="form-check-label">Remember me</label>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="login-or"><hr class="hr-or"></div>
+          <!-- Links -->
+          <div class="bottom text-center">
+            Aren't you user? <a href="#"><b>Register</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+  <p>PROUD TO BE AN ALUMMI!</p>
 </body>
+<!--
+<script type="text/javascript">
+	var a=setTimeout(Myfun, 10000);
 
+	function Myfun(){
+
+		alert("Please Login to continue");
+	}
+</script>
+-->
+<script type="text/javascript">
+	
+	function myFun(){
+
+		var provider = new firebase.auth.GoogleAuthProvider();
+		firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+  window.location='./home.html'
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+	}
+</script>
+<style type="text/css">
+	.nav-link{
+		color: white;
+	}
+	.navbar-brand{
+ margin-left: 10px;
+ margin-top: 10px;
+
+
+  }
+  #image{
+	height: 50px;
+	width:50px;
+}
+.a{
+	background-color: #ffdb58;
+	border:1px solid black;
+}
+.row{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+p{
+  color: white; 
+  font-family: "Courier";
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 13em;
+  animation: type 5s (20, end); 
+margin-top:-500px;
+  margin-left: 550px;
+  font-size: 50px;
+}
+
+p:nth-child(2){
+  animation: type2 8s steps(20, end);
+}
+
+
+
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+.masthead-text{
+  height: 300px;
+}
+
+.form-control{
+  height: 45px;
+}
+
+.login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+.container{
+    
+margin-left: 60px;
+
+}
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+
+.b{
+	margin-left: -400px;
+	margin-top: 120px;
+
+}
+
+      body{
+        background-image: url("Images/back.jpg");
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        
+	
+}
+@media(max-width: 700px){
+.container{
+		
+	width:350px;
+	height: 200px;
+	margin-right: 10px;
+
+}
+body{
+	background-image: url("back.jpg");
+	background-size: cover;
+   height: 400px;
+
+	background-repeat: no-repeat;
+	
+	
+}
+</style>
 </html>
