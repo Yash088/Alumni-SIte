@@ -1,7 +1,14 @@
+if(localStorage.getItem('node')){
+    var modal = UIkit.modal("#my_id");
 
+    modal.hide();
+    call_data();
+}
+else{
 var modal = UIkit.modal("#my_id");
 modal.show();
 
+}
 $(document).ready(function () {
     $("#year").datepicker({
         minViewMode: 2,
@@ -59,7 +66,7 @@ function sumbit() {
                                         if (curcom !== "" && curcom.match(alphaExp)) {
                                             if (locate1 !== "" && locate1.match(alphaExp)) {
                                                 if (adder !== "") {
-                                                    adding()
+                                                    adding(select,syear,eyear,pemail,oemail,linkId1,skyId1,company,curcom,locate1,adder,phoneNumber1,aurId1,name1);
                                                 }
                                                 else {
                                                     adder1.focus();
@@ -126,11 +133,26 @@ function sumbit() {
         name2.focus();
     }
 }
-function adding(){
+function adding(val,val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12,val13){
+var select=val;
+var syear=val1;
+var eyear=val2;
+var pemail=val3;
+var oemail=val4;
+var linkId1=val5;
+var skyId1=val6;
+var company=val7;
+var curcom=val8;
+var locate1=val9;
+var adder=val10;
+var phoneNumber1=val11;
+var aurId1=val12;
+var name1=val13;
+
 var node=pemail.split("@");
 console.log(node);
 var db=firebase.database();
-db.ref('/alumni_info/'+node).set(
+db.ref('/alumni_info/'+node[0]).set(
     {
             "Address" : adder,
             "AurId" : aurId1,
@@ -139,20 +161,54 @@ db.ref('/alumni_info/'+node).set(
             //"DOB" : 12345678909090,
             "Designation" : curcom,
             "Name" : name1,
-            "Oe-mail" : oemail,
-            "Pe-mail" : pemail,
+            "oemail" : oemail,
+            "pemail" : pemail,
             "Phone" : phoneNumber1,
             "Year" : syear+"-"+eyear,
             "linkdin" : linkId1,
             "location" : locate1,
             "skypeId" : skyId1,
-            "uid" : "uid"
+            "uid" : "123456"
           
         
     }
-);
-console.log("Node is created");
+    );
+    localStorage.setItem("name",name1);
+    localStorage.setItem("node",node[0]);
+    localStorage.setItem("uid","123456");
+    console.log("Node is created");
+    modal.hide();
+    call_data();
 }
 function update() {
     
+}
+function call_data(){
+    var db=firebase.database();
+    var node=localStorage.getItem("node");
+    var uid=localStorage.getItem("uid");
+ console.log(node)
+ if(node){   
+     db.ref('/alumni_info/'+node+'/').once('value',function(data){
+    console.log(data.val());
+        console.log(data.val().Name)
+        document.getElementById('name3').innerHTML=data.val().Name;
+        document.getElementById('batch').innerHTML=data.val().Year;
+        document.getElementById('e-mail').innerHTML=data.val().pemail;
+        document.getElementById('AurID').innerHTML=data.val().AurId;
+        console.log('YAsh');
+    
+    db.ref('/Events/node').once('value',function(data1){
+        console.log(data1.val().description)
+      document.getElementById('name4').innerHTML=data1.val().Name;
+      document.getElementById('Date').innerHTML="&nbsp;&nbsp;"+data1.val().date;
+      document.getElementById('descript').innerHTML =data1.val().description;
+      document.getElementById('locate').innerHTML="&nbsp;&nbsp;"+data1.val().location;
+      document.getElementById('url').src=data1.val().photo;
+    });
+    });
+}
+else{
+
+}
 }
