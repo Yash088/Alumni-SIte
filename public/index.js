@@ -3,6 +3,8 @@ if(localStorage.getItem('node')){
 
     modal.hide();
     call_data();
+    call_story();
+
 }
 else{
 var modal = UIkit.modal("#my_id");
@@ -187,10 +189,10 @@ function call_data(){
     var db=firebase.database();
     var node=localStorage.getItem("node");
     var uid=localStorage.getItem("uid");
- console.log(node)
- if(node){   
+    console.log(node)
+    if(node){   
      db.ref('/alumni_info/'+node+'/').once('value',function(data){
-    console.log(data.val());
+         console.log(data.val());
         console.log(data.val().Name)
         document.getElementById('name3').innerHTML=data.val().Name;
         document.getElementById('batch').innerHTML=data.val().Year;
@@ -198,7 +200,7 @@ function call_data(){
         document.getElementById('AurID').innerHTML=data.val().AurId;
         console.log('YAsh');
     
-    db.ref('/Events/node').once('value',function(data1){
+        db.ref('/Events/node').once('value',function(data1){
         console.log(data1.val().description)
       document.getElementById('name4').innerHTML=data1.val().Name;
       document.getElementById('Date').innerHTML="&nbsp;&nbsp;"+data1.val().date;
@@ -207,8 +209,28 @@ function call_data(){
       document.getElementById('url').src=data1.val().photo;
     });
     });
-}
-else{
+    
 
 }
+}
+function call_story(){
+    
+    var node=localStorage.getItem("node");
+    var db= firebase.database();
+  db.ref('/alumni_info/'+node+'/').once('value',function(data){
+  
+    db.ref('/Stories/').once('value',function(data1){
+    
+              if(data1.hasChild(node)){
+                db.ref('/Stories/'+node).once('value',function(data2){
+                      
+                      document.getElementById('batch').innerHTML='<span class="font">Batch : <span>'+data2.val().Batch;
+                    //   document.getElementById('course').innerHTML=data2.val().Course;
+                      document.getElementById('name5').innerHTML=data2.val().Name;
+                      document.getElementById('content').innerHTML=data2.val().Story;
+                      document.getElementById('head').innerHTML=data2.val().Title;
+                  });
+              }
+  });
+  });
 }
