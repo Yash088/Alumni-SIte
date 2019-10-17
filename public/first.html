@@ -17,72 +17,27 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
-    rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js">
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
   <title>Alumni Site</title>
-
   <style>
-    .ml1 {
-      font-weight: 900;
-      font-size: 3.5em;
-    }
 
-    .ml1 .letter {
-      display: inline-block;
-      line-height: 1em;
-    }
+      @media only screen and (max-width: 640px) {
 
-    .ml1 .text-wrapper {
-      position: relative;
-      display: inline-block;
-      padding-top: 0.1em;
-      padding-right: 0.05em;
-      padding-bottom: 0.15em;
-    }
-
-    .ml1 .line {
-      opacity: 0;
-      position: absolute;
-      left: 0;
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      transform-origin: 0 0;
-    }
-
-    .ml1 .line1 {
-      top: 0;
-    }
-
-    .ml1 .line2 {
-      bottom: 0;
-    }
-
-    .font {
-      color: #484848;
-      font-family: Montserrat;
-      font-size: 20px;
-      font-weight: 400;
-      letter-spacing: 2px;
-    }
-    .sty{
-      text-decoration: none !important;
-      color:rgb(255, 255, 255);
-      font-weight: 700;
-      font-family: 'Montserrat';
-      font-size: 15px;
-      letter-spacing:1px;
-    }
+  .yu1{
+                  margin-top:20% !important;
+              }}
   </style>
 </head>
 
@@ -92,14 +47,16 @@
 
     <div class="uk-modal-dialog uk-modal-body">
       <h2 class="uk-modal-title uk-text-center font">Post Your Story !!!</h2>
-      <form >
-          <input class="uk-input uk-width-1-1@s" placeholder="Title" id="title" maxlength="12">
+      <form>
+        <input class="uk-input uk-width-1-1@s" placeholder="Title" id="title" maxlength="12">
 
-        <textarea class="uk-textarea uk-width-1-1 uk-margin-small-top" placeholder="Post Your Story with length 300" id="story" maxlength="300"></textarea>
+        <textarea class="uk-textarea uk-width-1-1 uk-margin-small-top" placeholder="Post Your Story with length 300"
+          id="story" maxlength="300"></textarea>
         <button class="uk-button uk-button-default uk-modal-close uk-margin-top" type="button">Cancel</button>
 
         <button type="button" class="uk-button uk-button-primary uk-margin-top" onclick="sumbit1()">Sumbit</button>
-    </div>
+
+      </div>
 
     </form>
   </div>
@@ -107,7 +64,6 @@
 
 
   <div id="my_id" uk-modal>
-    <button class="uk-modal-close-default" type="button" uk-close></button>
 
     <div class="uk-modal-dialog uk-modal-body">
       <h2 class="uk-modal-title uk-text-center">Registration Form</h2>
@@ -223,106 +179,79 @@
           </div>
 
           <div class="uk-align-center">
-
+            
             <button type="button" class="uk-button uk-button-primary" onclick="sumbit()">Sumbit</button>
+            <button class="uk-button uk-button-default uk-modal-close uk-margin-left" type="button">Cancel</button>
           </div>
+        </form>
+      </form>
     </div>
   </div>
 
-  </form>
 
-  <!-- TOP-NAVBAR
-    <div class="uk-navbar " style="background-color: #173180;" uk-sticky="top;">
-            <img src="https://media.glassdoor.com/sqll/459338/amity-university-squarelogo.png" height="120px" width="120px" style="float: left;">
-            <span class=" uk-animation-fade  uk-align-center uk-heading-small" style="color: white;">Amity University Rajasthan</span>
-            <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-                style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
-            <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar">
-    
-                    <ul class="uk-nav uk-nav-default">
-                        <li class="uk-active"><a href="#">About Us</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Login</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Message from VC</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Student Testimonials</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Feedback</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Contact Us</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Job Openings</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Photo Gallery</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Events invite notice</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">News Room</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Group Members</a></li>
-                        <li class="uk-nav-divider"></li>
-                    </ul>
-    
-                </div>
-            </div>
-        </div> -->
-  <div style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden">
+  
+  <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
     <ul style="list-style-type: none;padding:5px;">
+      
       <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+      <li style="float:left;"><a style="text-decoration: none;"><h4 style="color:white">Dash Board</h4></a></li>
       <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
 
 
     </ul>
 
   </div>
+
   <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
-    <div class=" uk-navbar-left" style="overflow:hidden">
+    <div class=" uk-navbar-left " style="overflow:hidden">
       <ul class="uk-navbar-nav">
         <li>
-          <a style="color:#1a275b !important;">About Us</a></li>
-        <li><a style="color:#1a275b !important;">Events</a></li>
-        <li class="uk-active"><a href="#">Message From VC</a></li>
-        <li class="uk-active"><a href="#">Student Testimonials</a></li>
+          <a style="color:#1a275b !important;font-size:12px;">About Us</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;">Events</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Message From VC</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Feedback</a></li>
+        <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
 
       </ul>
     </div>
     <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
-
-
       <li style="list-style-type: none;">
-        <img src="Images/logo.jpeg" height="120px" width="120px" style="z-index: -1;" class="uk-box-shadow-large">
+        <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
       </li>
 
     </div>
-    <div class=" uk-navbar-right " style="overflow:hidden">
+    <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
       <ul class="uk-navbar-nav ">
-
-        <li class="uk-active"><a href="#">Feedback</a></li>
-        <li><a style="color:#1a275b !important;">Alumni Stories</a></li>
-        <li><a style="color:#1a275b !important;">Gallery</a></li>
-        <li class="uk-active"><a href="#">Contact Us</a></li>
-        <li class="uk-active"><a href="#">News</a></li>
+        <li><a style="color:#1a275b !important; font-size:12px;">Alumni Stories</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;">Gallery</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Contact Us</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#">News</a></li>
 
       </ul>
     </div>
 
 
   </nav>
+  <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+    <div>
+        <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+    </div>
+    <div class="uk-navbar-right">
+         
+
+            <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                         style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+            
+    </div>
   </div>
 
 
-  <!-- <div class="uk-navbar " style="background-color: #173180;" > -->
-
-  <!-- <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-                style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
-             -->
-  <!-- <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+             
+   <div id="offcanvas-nav" uk-offcanvas="overlay: true">
                 <div class="uk-offcanvas-bar">
     
                     <ul class="uk-nav uk-nav-default">
-                        <li class="uk-active"><a href="#">About Us</a></li>
+                        <li class="uk-active" ><a href="#">About Us</a></li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-active"><a href="#">Login</a></li>
                         <li class="uk-nav-divider"></li>
@@ -347,13 +276,8 @@
                     </ul>
     
                 </div>
-            </div> -->
-  <!-- </div>  -->
-
-
-
-
-
+            
+              </div> 
 
   <div class="uk-position-relative uk-visible-toggle uk-light"
     uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1"
@@ -385,7 +309,7 @@
     <h1 class="ml1" style="margin-top: 80px;">
       <span class="text-wrapper">
         <span class="line line1"></span>
-        <span class="letters">PROUD TO BE AN ALUMINI</span>
+        <span class="letters">PROUD TO BE A ALUMINI</span>
         <span class="line line2"></span>
       </span>
     </h1>
@@ -397,24 +321,25 @@
   </h3>
 
   <div uk-gird>
-    <div class="uk-width-1-1@s">
+    <div class="uk-width-child-width-expand@s">
       <img src="http://sayidan.kenzap.com/wp-content/uploads/2016/07/galery-popup-14-4-569x331.jpg" width="500px"
         id="url" style="margin-left:3%;" height="300px" uk-img>
-      <div class="uk-align-right uk-width-1-2@s" style="margin-right: 2%;">
-        <h2 class="font " style="font-size:30px;font-weight: 700" id="name4"><b>Event Name</b></h2>
+      <div class="uk-align-right uk-width-1-2@s ty " >
+        <h2 class="font ty1" style="font-size:30px;font-weight: 700" id="name4"><b>Event Name</b></h2>
         <span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"
           id="Date">&nbsp;&nbsp;Jaipur
         </span> <br>
-        <br><span uk-icon="calendar"> </span><span class="font" style="color:#757575;" id="locate"> &nbsp;&nbsp;Jaipur
+        <br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;Jaipur
         </span>
 
 
-        <p class="font" style="text-align: justify; font-size:16px;" id="descript">Event Description </p>
+        <p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">Event Description </p>
       </div>
     </div>
 
   </div>
-  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade"
+  <div class="uk-section">
+  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade "
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:7%;">Success Stories
     <hr class="uk-divider-small">
   </h3>
@@ -429,22 +354,22 @@
           uk-grid>
           <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
           <div class="uk-card-media-left uk-cover-container">
-            <img
-              src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-              alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
+            <img src="Images/yash.png" alt="" uk-cover>
+            <canvas width="100" height="400"></canvas>
           </div>
           <div>
             <div class="uk-card-body uk-animation-slide-right ">
               <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
               <h3 class="uk-card-title " id="head">Media Left</h3>
-              <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              
-              <p class="font uk-align-right" style="margin-right:9%"id="name5">Name</p><br>
-            
-            <br>  <p class="font uk-align-right" style="margin-right:-19%;"id="batch">Batchvdvddv</p>
+              <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+              </p>
+
+              <p class="font uk-align-right" style="margin-right:9%" id="name5">Yash</p><br>
+
+              <br>
+              <p class="font uk-align-right" style="margin-right:-19%;" id="batch">Batchvdvddv</p>
               <!-- <p class="font uk-align-right" style="margin-right:-9%;margin-top:12px;"id="course">Course</p> -->
-            
+
             </div>
           </div>
         </div>
@@ -477,8 +402,9 @@
         </div>
         <div>
           <div class="uk-card-body uk-animation-slide-left">
-            <h3 class="uk-card-title" >Media Right</h3>
-            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Media Right</h3>
+            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
           </div>
         </div>
   </div>
@@ -491,18 +417,17 @@
     uk-slideshow-item="next"></a>
 
   </div>
-
-
-  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
-    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
+  </div>
+<div class=" uk-section yu1"
+  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1"style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
     <hr class="uk-divider-small">
   </h3>
-  <div uk-gird>
+  
 
-    <div class="uk-width-1-1">
-      <img src="http://sayidan.kenzap.com/wp-content/uploads/2016/07/galery-popup-14-4-569x331.jpg" width="500px"
-        style="margin-left:3%;" height="300px" uk-img>
-      <div class="uk-align-right uk-width-1-2@s" style="margin-right:1%">
+    <div class="uk-child-width-expand@s " class="yu1">
+      <img src="http://sayidan.kenzap.com/wp-content/uploads/2016/07/galery-popup-14-4-569x331.jpg" 
+        style="margin-left:3%;" class="uy3" uk-img>
+      <div class="uk-align-right uk-width-1-2@s" style="margin-right:-3%">
         <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
         <span class="font">Batch : </span><span class="font" id="batch"
           style="color:#757575;font-size:16px;">&nbsp;&nbsp;2017-2021
@@ -512,15 +437,18 @@
         <br><span class="font"> Aur-ID : </span><span class="font" style="color:#757575;" id="AurID">
           A20405217059</span><br>
         <br>
-        <center><button class="uk-button uk-align-left uk-button-large"
+        <center><button class="uk-button uk-align-left uk-button-large er"
             style="background-color:#FCD12A;margin-top:4%"><a
               style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"
               href="update_info.html">Update Information </a></button></center>
-        <center><button  type="button" class="uk-button uk-align-right uk-button-large uk-margin-medium-right sty" uk-toggle="target: #my_id1"style="background-color:#FCD12A;margin-top:4%">Post Your Story </button></center>
+        <center><button type="button" class="uk-button uk-align-right uk-button-large  sty ty3"
+            uk-toggle="target: #my_id1" style="background-color:#FCD12A;margin-top:4%;">Post Your Story </button>
+        </center>
 
       </div>
     </div>
-  </div>
+</div>
+<div class="uk-section">
   <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:9%"> Messgae from VC sir
     <hr class="uk-divider-small">
@@ -530,121 +458,13 @@
     <div class="uk-width-1-1">
       <img src="https://www.amity.edu/jaipur/images/arun-patil.jpg" width="300px" class="uk-margin-medium-left"
         style="margin-left:3%;" height="100px" uk-img>
-      <div class="uk-align-right uk-margin-medium-top uk-width-1-2@s" style="margin-right:5%; text-align:justify">
-        vfvfffffffffffffffffffffkmmmmmmmmmmmmmmmmmmmvfffffffffffffkmvrnjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjsllllllllllllll
-        effffffffffffffr<a href="read.html">Read more...</a>
+      <div class="uk-align-right uk-margin-medium-top " style="margin-right:3%; text-align:justify">
+        Professor (Dr) Arun Patil is currently Vice-Chancellor and President of Amity University Rajasthan, India. Prior to this Professor Patil was Pro Vice-Chancellor and Pro-President at Amity University Rajasthan. Before moving to India, Professor Patil was Director of Postgraduate Coursework Studies and Director of Deakin Engineering Education Research (DEER) in the School of Engineering, Deakin University, Australia.
       </div>
     </div>
   </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-  <!-- <center>
-        <hr style="width: 50%;">
-        <h1>Events</h1>
-        <hr style="width: 50%;">
-        </center>
-        <marquee direction="left" width="100%" height="100%">
-        <div class="card" style="width: 18rem;height: 18em;margin-left: 20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-           
-           
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;height: 18em;margin-left: 20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-           
-           
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;height: 18em;margin-left: 20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            
-           
-          </div>
-        </div>
-       
-        </marquee>
-
-      <div>
-      <hr style="width: 50%;">
-      <h1>NEWS</h1> 
-      <hr style="width: 50%;">
-      </div>
-    <div class="uk-child-width-1-5@m uk-grid-small uk-grid-match uk-animation-slide-right-small uk-animation-slow " uk-grid style="width: 1200px;height: 300px;margin-left: 200px; ">
-          
-        <div>
-                <div class="uk-card uk-card-default uk-card-body" >
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="uk-card uk-card-default uk-card-body uk-margin-large-left"  >
-                    <h3 class="uk-card-title">Default</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="uk-card uk-card-default uk-card-body uk-margin-large-left" >
-                        <h3 class="uk-card-title">Default</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-    
-            </div>
-            </center>
-
-        
-        
-        
-        
-        
-        
-        <center>
-                <hr style="width: 50%;">
-        <h1>Photos</h1>
-        <hr style="width: 50%;">
-        </center>
-        <marquee direction="right" width="100%" height="100%">
-        <div class="card" style="width: 18rem;height: 18em;margin-left: -20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-           
-           
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;height: 18em;margin-left: 20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-           
-           
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;height: 18em;margin-left: 20px;float: left;  box-shadow: 5px 10px 18px #888888;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            
-           
-          </div>
-        </div>
-        
-        </marquee>
-
-
-
-
-
-
-
-
-    <center>
- -->
+</div>
   <div class="uk-section uk-section-secondary uk-light uk-margin-large-top">
     <div uk-grid>
       <div class="uk-align-left uk-margin-top">
@@ -714,7 +534,17 @@
 </body>
 
 <script>
-  var textWrapper = document.querySelector('.ml1 .letters');
+    $("#year").datepicker({
+                minViewMode: 2,
+                format: 'yyyy'
+            });
+            $("#year1").datepicker({
+                minViewMode: 2,
+                format: 'yyyy'
+            });
+
+   
+var textWrapper = document.querySelector('.ml1 .letters');
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
   anime.timeline({ loop: true })
@@ -741,38 +571,38 @@
       easing: "easeOutExpo",
       delay: 1000
     });
-    function sumbit1(){
+  function sumbit1() {
 
-     if(localStorage.getItem('node')){
-    var node=localStorage.getItem('node');
-      var db=firebase.database();
-    db.ref('/alumni_info/'+node+'/').once('value',function(data){
-    
-    db.ref('/Stories/').on('value',function(data1){
-      if(data1.hasChild(node)){
+    if (localStorage.getItem('node')) {
+      var node = localStorage.getItem('node');
+      var db = firebase.database();
+      db.ref('/alumni_info/' + node + '/').once('value', function (data) {
 
-         alert("You can Post one Story only");
-      }
-      else{
-        var stry=document.getElementById('story').value;
-        let title23 = document.getElementById('title').value;
-        db.ref('/Stories/'+node).set({
-          Title: title23,
-          Story: stry,
-          Name:data.val().Name,
-          Course: data.val().Course,
-          Batch: data.val().Year
+        db.ref('/Stories/').on('value', function (data1) {
+          if (data1.hasChild(node)) {
 
-               
+            alert("You can Post one Story only");
+          }
+          else {
+            var stry = document.getElementById('story').value;
+            let title23 = document.getElementById('title').value;
+            db.ref('/Stories/' + node).set({
+              Title: title23,
+              Story: stry,
+              Name: data.val().Name,
+              Course: data.val().Course,
+              Batch: data.val().Year
+
+
+            });
+          }
         });
-      }
-    });
-    });
-       document.getElementById('story').value
-     }
-
-
+      });
+      document.getElementById('story').value
     }
+
+
+  }
 </script>
 
 </html>

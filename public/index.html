@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link href="style.css" rel="stylesheet" >
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
@@ -52,83 +52,93 @@
                     duration:2000
                 });
             </script>
-    <!-- Navbar -->
-    <div>
-    <div  style="background-color:#153373; border:1px solid transparent;height:40px;">
-        <ul style="list-style-type: none;padding:5px;">
-            <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
-            <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
-            
-           
-        </ul>
+    <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+            <ul style="list-style-type: none;padding:5px;">
+                    <li style="float:left; margin-right:15px;"><a style="text-decoration: none;">            <h3 style="color:white">Alumni</h3></a></li>
+
+              <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+              <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+            </ul>
+          </div>
         
-    </div>
-    <nav class=" uk-navbar-container uk-visible@m" style="height:70px; "uk-navbar>
-            <div class=" uk-navbar-left uk-width-1-2" >
-                    <ul class="uk-navbar-nav">
-            <li style="width:300px;" >
-                <a style="color:#1a275b !important;">About Us</a></li>
-            <li><a style="color:#1a275b !important;">Events</a></li>
-        </ul>
-        </div>
-        <div class="uk-navbar-center uk-margin-large-right " style="margin-top:-16px;">
-
+          <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+            <div class=" uk-navbar-left " style="overflow:hidden">
+              <ul class="uk-navbar-nav">
+                <li>
+                  <a href="aboutus.html"style="color:#1a275b !important;">About Us</a></li>
+                <li><a style="color:#1a275b !important;">Events</a></li>
+                <li><a style="color:#1a275b !important;" href="#">Message From VC</a></li>
+                <li><a style="color:#1a275b !important;" href="#">Feedback</a></li>
+                <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
         
-                    <li style="list-style-type: none;margin-right:150px;" >              
-                        <img src="Images/logo.jpeg" height="120px" width="120px" style="z-index: -1;"class="uk-box-shadow-large" >
-                    </li>
-                 
-        </div>
-                    <div class=" uk-navbar-right uk-width-1-2" >
-                            <ul class="uk-navbar-nav">
-                    <li style=" width:300px;" >
-                        <a style="color:#1a275b !important;">Alumni Stories</a></li>
-                    <li style="width:300px;"><a style="color:#1a275b !important;">Gallery</a></li>
-                </ul>
-                </div>
-                
-    
-            </nav>
-    </div>
-
-    
-    <div class="uk-navbar " style="background-color: #173180;" >
-        
-        <!-- <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-            style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
-         -->
-            <!-- <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-            <div class="uk-offcanvas-bar">
-
-                <ul class="uk-nav uk-nav-default">
-                    <li class="uk-active"><a href="#">About Us</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Login</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Message from VC</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Student Testimonials</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Feedback</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Contact Us</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Job Openings</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Photo Gallery</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Events invite notice</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">News Room</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-active"><a href="#">Group Members</a></li>
-                    <li class="uk-nav-divider"></li>
-                </ul>
-
+              </ul>
             </div>
-        </div> -->
-    </div>
-
+            <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+              <li style="list-style-type: none;">
+                <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+              </li>
+        
+            </div>
+            <div class=" uk-navbar-right uk-visible@m " style="overflow:hidden">
+              <ul class="uk-navbar-nav">
+                <li><a style="color:#1a275b !important;">Alumni Stories</a></li>
+                <li><a style="color:#1a275b !important;">Gallery</a></li>
+                <li><a style="color:#1a275b !important;" href="contactus.htmlContact Us</a></li>
+                <li><a style="color:#1a275b !important;" href="#">News</a></li>
+        
+              </ul>
+            </div>
+        
+        
+          </nav>
+          <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+            <div>
+                <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+            </div>
+            <div class="uk-navbar-right">
+                 
+        
+                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                                 style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                    
+            </div>
+          </div>
+        
+        
+                     
+           <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                        <div class="uk-offcanvas-bar">
+            
+                            <ul class="uk-nav uk-nav-default">
+                                <li class="uk-active"><a href="#">About Us</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Login</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Message from VC</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Feedback</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Contact Us</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Job Openings</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Photo Gallery</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Events invite notice</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">News Room</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Group Members</a></li>
+                                <li class="uk-nav-divider"></li>
+                            </ul>
+            
+                        </div>
+                    
+                      </div> 
+        
+    
     <!-- Slide Show -->
     <div class="uk-position-relative uk-visible-toggle uk-light"  
         uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
@@ -190,77 +200,14 @@
 </div>
 <!-- <button class=" " style="color:rgb(255, 255, 255);background-color: #f7ca18;font-family: 'Montserrat';font-size: 15px;line-height: 15px;letter-spacing: 1px; font-weight:700 ">Log in Alumni Dashboard</button> -->
         
-<button class="uk-button uk-align-center uk-button-large" 
+<button class="uk-button uk-align-center uk-button-large@m " 
         style="background-color:#FCD12A;margin-top:4%"><a style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"href="first.html">  Login to Dashboard </a></button>
     <!-- Group Members -->
     <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style=" margin-top:5%;color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Group Members <hr class="uk-divider-small" ></h3>
 
-    <!-- <div class="uk-flex uk-flex-wrap uk-child-width-1-3" style=" margin-top:4%;"
-        uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500;repeat: true;">
-        <div class="uk-align-center">
-            <div class="uk-card uk-card-body uk-align-centers uk-box-shadow-hover-small">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-body uk-box-shadow-hover-small">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-box-shadow-hover-small uk-card-body uk-margin-top">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-box-shadow-hover-small uk-card-body">
-                <img class="uk-border-circle"
-                    src="https://www.fmeextensions.com/media/catalog/product/cache/1/image/500x416/9df78eab33525d08d6e5fb8d27136e95/u/s/user-profile.jpg"
-                    width="200" height="200" alt="Border circle">
-                <div class="uk-card uk-card-body">
-                    <h3 class="uk-card-title">nx jasnx</h3>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="uk-child-width-expand@s uk-margin-medium-top"uk-grid>
 <div class="uk-margin-left">
-<img src="https://images.unsplash.com/photo-1496469888073-80de7e952517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" uk-img>
+<img src="https://amity.edu/events/images/3437_2.jpg" uk-img>
 </div>
 <div>
     <h4 style="font-family: 'Montserrat', sans-serif;font-size:28px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Alumni<hr class="uk-divider-small" ><h4>
@@ -280,7 +227,7 @@
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
         <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
         <div class="uk-card-media-left uk-cover-container">
-            <img src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" uk-cover>
+            <img src="" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
         </div>
         <div>

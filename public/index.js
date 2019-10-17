@@ -1,9 +1,9 @@
 if(localStorage.getItem('node')){
     var modal = UIkit.modal("#my_id");
-
     modal.hide();
     call_data();
     call_story();
+   
 
 }
 else{
@@ -11,20 +11,13 @@ var modal = UIkit.modal("#my_id");
 modal.show();
 
 }
-$(document).ready(function () {
-    $("#year").datepicker({
-        minViewMode: 2,
-        format: 'yyyy'
-    });
-    $("#year1").datepicker({
-        minViewMode: 2,
-        format: 'yyyy'
-    });
+
+  
     // $("#dob").datepicker({
     //     minViewMode: 4,
     //     format: 'dd/m/yyyy'
     // });
-});
+
 function sumbit() {
     var aurId1 = document.getElementById('aurId').value;
     var aurId2 = document.getElementById('aurId');
@@ -233,4 +226,29 @@ function call_story(){
               }
   });
   });
+}
+function search(){
+    var find=document.getElementById('search').value;
+    var db= firebase.database();
+    db.ref('/alumni_info').on('value',function(snapshot){
+       if(snapshot.hasChild(find)){
+           //snapshot.key;
+           find=snapshot.key;
+           //loop and once in fires ref to fetch all keys
+            db.ref('/alumni-info/'+find).on('value',function(data){
+                 data.val().Name;
+                 data.val().Year;
+                 data.val().pemail;
+                 data.val().Designation+"under"+data.val().Company;
+                 data.val().Phone;
+                 data.val().linkdin;
+            });
+       }
+       else{
+           alert('User Name Not Found');
+       }
+
+    });
+
+    
 }
