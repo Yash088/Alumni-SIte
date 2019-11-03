@@ -1,8 +1,10 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- AOS Script -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
@@ -18,297 +20,277 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<style>
-.ERT{
-    animation: mymove 12s infinite;
-
-}
-@keyframes mymove{
-0%{
-    background-image:url('https://amity.edu/images/logo.png');
-}
-25%{
-    background-image:url('Images/img1.jpg');
-}
-50%{
-
-    background-image:url('Images/i1.jpg');
-}
-75%{
-
-    background-image:url('Images/i2.jpg');
-}
-100%{
-
-    background-image:url('https://amity.edu/images/logo.png');
-}
-}
-</style>
+    <style>
+      .small_left{
+             margin-left:20px !important;
+         }
+     @media only screen and (max-width: 640px) {
+         .small_left{
+             margin-left:20px !important;
+         }
+         .vsmall_left{
+             margin-left:10px !important;
+         }
+         .small_right{
+             margin-right:20px;
+         }
+         
+  
+         
+     }
+    </style>
 </head>
-
 <body>
-        <script>
-                AOS.init({
-                    duration:2000
-                });
-            </script>
-    <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
-            <ul style="list-style-type: none;padding:5px;">
-                    <li style="float:left; margin-right:15px;"><a style="text-decoration: none;">            <h3 style="color:white">Alumni</h3></a></li>
 
-              <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
-              <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
-            </ul>
-          </div>
-        
-          <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
-            <div class=" uk-navbar-left " style="overflow:hidden">
-              <ul class="uk-navbar-nav">
-                <li>
-                  <a href="aboutus.html"style="color:#1a275b !important;">About Us</a></li>
-                <li><a style="color:#1a275b !important;">Events</a></li>
-                <li><a style="color:#1a275b !important;" href="#">Message From VC</a></li>
-                <li><a style="color:#1a275b !important;" href="#">Feedback</a></li>
-                <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
-        
-              </ul>
-            </div>
-            <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
-              <li style="list-style-type: none;">
-                <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
-              </li>
-        
-            </div>
-            <div class=" uk-navbar-right uk-visible@m " style="overflow:hidden">
-              <ul class="uk-navbar-nav">
-                <li><a style="color:#1a275b !important;">Alumni Stories</a></li>
-                <li><a style="color:#1a275b !important;">Gallery</a></li>
-                <li><a style="color:#1a275b !important;" href="contactus.htmlContact Us</a></li>
-                <li><a style="color:#1a275b !important;" href="#">News</a></li>
-        
-              </ul>
-            </div>
-        
-        
-          </nav>
-          <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
-            <div>
-                <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
-            </div>
-            <div class="uk-navbar-right">
-                 
-        
-                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-                                 style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
-                    
-            </div>
-          </div>
-        
-        
-                     
-           <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-                        <div class="uk-offcanvas-bar">
+        <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+                <ul style="list-style-type: none;padding:5px;">
+                  
+                  <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+                  <li style="float:left;"><a style="text-decoration: none;"><h4 style="color:white">Alumni</h4></a></li>
+                  <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
             
-                            <ul class="uk-nav uk-nav-default">
-                                <li class="uk-active"><a href="#">About Us</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Login</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Message from VC</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Student Testimonials</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Feedback</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Contact Us</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Job Openings</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Photo Gallery</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Events invite notice</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">News Room</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-active"><a href="#">Group Members</a></li>
-                                <li class="uk-nav-divider"></li>
-                            </ul>
             
-                        </div>
-                    
-                      </div> 
-        
-    
-    <!-- Slide Show -->
-    <div class="uk-position-relative uk-visible-toggle uk-light"  
-        uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
-
-        <ul class="uk-slideshow-items ">
-            <li>
-                <img src="Images/img1.jpg" alt="" uk-cover>
-            </li>
-            <li>
-                <!-- <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline uk-cover></video> -->
-                <img src="Images/i2.jpg" alt="" uk-cover>
-            </li>
-            <li>
-                <!-- <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-cover></iframe> -->
-                <img src="Images/i3.jpg" alt="" uk-cover>
-            </li>
-        </ul>
-
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-            uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-            uk-slideshow-item="next"></a>
-
-    </div>
-
- 
-    <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left " style="color:#484848; margin-top:8%;font-family:'Montserrat';font-size:24px;font-weight: 400">My Alumni Dashboard  <hr class="uk-divider-small" ></h3>
-         <div class="uk-child-width-expand@s uk-margin-left "style="margin-top:5%" uk-grid>
-   
-   
-
-    <div>
+                </ul>
             
-
-        <span  style="color:#5363a7;" uk-icon="icon: mail; ratio: 1.5"></span>
-        <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Checking Message</h4>
-        <p class="uk-margin-top"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
-    </div>
-    <div>
-        <span  style="color:#5363a7;" uk-icon="icon: user; ratio: 1.5"></span>
-        <h4 class="uk-margin-top"style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Update My Information<h4>
-        <p class="uk-margin-top"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
-        
-    </div>
-    <div >
-        <span  style="color:#5363a7;" uk-icon="icon: users; ratio: 1.5"></span>
-        <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Join With My Alumni Forum</h4>
-        <p class="uk-margin-top"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
-        
-        
-    </div>
-    <div >
-        <span  style="color:#5363a7;" uk-icon="icon:search; ratio: 1.5"></span>
-        <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Search Alumni Directory</h4>
-        <p class="uk-margin-top"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
-
-
-</div>
-</div>
-<!-- <button class=" " style="color:rgb(255, 255, 255);background-color: #f7ca18;font-family: 'Montserrat';font-size: 15px;line-height: 15px;letter-spacing: 1px; font-weight:700 ">Log in Alumni Dashboard</button> -->
-        
-<button class="uk-button uk-align-center uk-button-large@m " 
-        style="background-color:#FCD12A;margin-top:4%"><a style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"href="first.html">  Login to Dashboard </a></button>
-    <!-- Group Members -->
-    <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style=" margin-top:5%;color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Group Members <hr class="uk-divider-small" ></h3>
-
-    <div class="uk-child-width-expand@s uk-margin-medium-top"uk-grid>
-<div class="uk-margin-left">
-<img src="https://amity.edu/events/images/3437_2.jpg" uk-img>
-</div>
-<div>
-    <h4 style="font-family: 'Montserrat', sans-serif;font-size:28px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Alumni<hr class="uk-divider-small" ><h4>
-        <p class="uk-margin-top"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
-
-</div>
-    </div>
-
-    <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:5%;">Success Stories  <hr class="uk-divider-small" ></h3>
-    
-    
-     <div class="uk-position-relative uk-visible-toggle uk-light"  
-    uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
-
-    <ul class="uk-slideshow-items ">
-        <li>
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
-        <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
-        <div class="uk-card-media-left uk-cover-container">
-            <img src="" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
-            <div class="uk-card-body uk-animation-slide-right ">
-                <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
-                <h3 class="uk-card-title ">Media Left</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-        </div>
-    </div>
-        </li>
-        <li>
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
-            <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
-            <div class="uk-card-media-left uk-cover-container">
-                <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80 " alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body uk-animation-slide-right ">
-                    <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
-                    <h3 class="uk-card-title ">Media Left</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            
+              <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+                <div class=" uk-navbar-left " style="overflow:hidden">
+                  <ul class="uk-navbar-nav">
+                    <li>
+                      <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+                    <li><a style="color:#1a275b !important;font-size:12px;" onclick="alert('Please login to Dashboard For the Events');">Events</a></li>
+                    <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="#">Message From VC</a></li> -->
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="#" onclick="alert('Feedback is not available for the evnets');"">Feedback</a></li>
+                    <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+            
+                  </ul>
                 </div>
-            </div>
-        </div>
-        </li>
-        <li>
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid ">
-                <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                    <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
-                    <canvas width="600" height="400"></canvas>
+                <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+                  <li style="list-style-type: none;">
+                    <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+                  </li>
+            
+                </div>
+                <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
+                  <ul class="uk-navbar-nav ">
+                    <li><a style="color:#1a275b !important; font-size:12px;" href="#story">Alumni Stories</a></li>
+                    <!-- <li><a style="color:#1a275b !important;font-size:12px;">Gallery</a></li> -->
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="#" onclick="alert('News Is underGoping ,Due to firebase error');">News</a></li>
+            
+                  </ul>
+                </div>
+            
+            
+              </nav>
+              <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+                <div>
+                    <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+                </div>
+                <div class="uk-navbar-right">
+                     
+            
+                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                                     style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                        
+                </div>
+              </div>
+            
+            
+                         
+               <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                            <div class="uk-offcanvas-bar">
+                
+                                <ul class="uk-nav uk-nav-default">
+                                    <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="#" onclick="alert('work is under process,Sorry for the inconvience');">Login</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <!-- <li class="uk-active"><a href="#">Message from VC</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <!-- <li class="uk-active"><a href="#">Feedback</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <!-- <li class="uk-active"><a href="#">Photo Gallery</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <!-- <li class="uk-active"><a href="#">Events invite notice</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <li class="uk-active"><a href="#" onclick="alert('Work is under goimg')">News Room</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="#">Group Members</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                </ul>
+                
+                            </div>
+                        
+                          </div> 
+        <div class="uk-position-relative uk-visible-toggle uk-light"
+        uk-slideshow="autoplay:true;  finite:true; animation: push " tabindex="-1"
+        style="overflow:hidden">
+    
+        <ul class="uk-slideshow-items " style="overflow:hidden">
+    
+          <li>
+            <img src="Images/img1.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <!-- <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline uk-cover></video> -->
+            <img src="Images/i2.jpg" alt="" uk-cover>
+          </li>
+          <li>
+            <!-- <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-cover></iframe> -->
+            <img src="Images/i3.jpg" alt="" uk-cover>
+          </li>
+        </ul>
+    
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+          uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+          uk-slideshow-item="next"></a>
+    
+      </div>
+      <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left " style="color:#484848; margin-top:8%;font-family:'Montserrat';font-size:24px;font-weight: 400">My Alumni Dashboard  <hr class="uk-divider-small" ></h3>
+      <div class="uk-child-width-expand@s uk-margin-left "style="margin-top:5%" uk-grid>
+            <div>
+            
+
+                    <span  style="color:#5363a7;" uk-icon="icon: mail; ratio: 1.5"></span>
+                    <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Checking Message</h4>
+                    <p class="uk-margin-top small_right"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
                 </div>
                 <div>
-                    <div class="uk-card-body uk-animation-slide-left">
-                        <h3 class="uk-card-title">Media Right</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <span  style="color:#5363a7;" uk-icon="icon: user; ratio: 1.5"></span>
+                    <h4 class="uk-margin-top"style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Update My Information<h4>
+                    <p class="uk-margin-top small_right"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
+                    
+                </div>
+                <div >
+                    <span  style="color:#5363a7;" uk-icon="icon: users; ratio: 1.5"></span>
+                    <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Join With My Alumni Forum</h4>
+                    <p class="uk-margin-top small_right"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
+                    
+                    
+                </div>
+                <div >
+                    <span  style="color:#5363a7;" uk-icon="icon:search; ratio: 1.5"></span>
+                    <h4 class="uk-margin-top" style="font-family: 'Montserrat', sans-serif;font-size:18px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Search Alumni Directory</h4>
+                    <p class="uk-margin-top small_right"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam.</p>
+            
+            
+            </div>
+            </div>
+            <!-- <button class=" " style="color:rgb(255, 255, 255);background-color: #f7ca18;font-family: 'Montserrat';font-size: 15px;line-height: 15px;letter-spacing: 1px; font-weight:700 ">Log in Alumni Dashboard</button> -->
+                    
+            <button class="uk-button uk-align-center uk-button-large" 
+                    style="background-color:#FCD12A;margin-top:4%"><a style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"href="first.html">  Login to Dashboard </a></button>
+                <!-- Group Members -->
+                <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style=" margin-top:5%;color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Group Members <hr class="uk-divider-small" ></h3>
+            
+                <div class="uk-child-width-expand@s uk-margin-medium-top"uk-grid>
+            <div class="uk-margin-left small_right">
+            <img src="Images/alumni.png" uk-img>
+            </div>
+            <div>
+                <h4 class="small_left" style="font-family: 'Montserrat', sans-serif;font-size:28px;letter-spacing:1.44px;line-height:21.6px;color: #484848">Alumni<hr class="uk-divider-small" ><h4>
+                    <p class="uk-margin-top small_left"style="color:#222222;font-family: 'Montserrat';font-size:14px;line-height:25.2px;letter-spacing: normal;font-weight:400">Alumni is the person who greets and achieve something by spending time with premises and as well as after the farewell from the college . A person who has to be fame an honoured. Alumni is the power and the Network of our College that has being a tradition to meet them have a joy of their experience in Our institue . We feel proud when an alumni comes to meetup and show case their past experience with us. That is why the Alumni has a important role of the University. </p>
+            
+            </div>
+                </div>
+                <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade" style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:5%;">Success Stories  <hr class="uk-divider-small" ></h3>
+    
+    
+                <div class="uk-position-relative uk-visible-toggle uk-light"  id="story"
+               uk-slideshow="autoplay:true; min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
+           
+               <ul class="uk-slideshow-items ">
+                   <li>
+                       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
+                   <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
+                   <div class="uk-card-media-left uk-cover-container">
+                       <img src="" alt="" uk-cover>
+                       <canvas width="600" height="400"></canvas>
+                   </div>
+                   <div>
+                       <div class="uk-card-body uk-animation-slide-right ">
+                           <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
+                           <h3 class="uk-card-title ">Yash Kalra</h3>
+                           <p></p>
+                       </div>
+                   </div>
+               </div>
+                   </li>
+                   <li>
+                       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid>
+                       <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
+                       <div class="uk-card-media-left uk-cover-container">
+                           <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80 " alt="" uk-cover>
+                           <canvas width="600" height="400"></canvas>
+                       </div>
+                       <div>
+                           <div class="uk-card-body uk-animation-slide-right ">
+                               <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
+                               <h3 class="uk-card-title ">Media Left</h3>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                           </div>
+                       </div>
+                   </div>
+                   </li>
+                   <li>
+                       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top" uk-grid ">
+                           <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                               <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+                               <canvas width="600" height="400"></canvas>
+                           </div>
+                           <div>
+                               <div class="uk-card-body uk-animation-slide-left">
+                                   <h3 class="uk-card-title">Media Right</h3>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
+           
+               <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#" uk-slidenav-previous
+                   uk-slideshow-item="previous"></a>
+               <a class="uk-position-center-right uk-position-small uk-hidden-hover "href="#"  style="color:black;"uk-slidenav-next
+                   uk-slideshow-item="next"></a>
+           
+           </div>
+           <div class="uk-section uk-section-secondary uk-light " >
+                <div uk-grid>
+                    <div class="uk-align-left uk-margin-top">
+                       <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+        
                     </div>
+                   <div >
+                  <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+                    <ul style="list-style-type: none; " class="uk-margin-top ">
+                        
+                        <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left">Alumni</li>
+                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left">Gallery</li>
+                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left">Events</li>
+                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" >Stories</li>
+                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left">Dashboard</li>
+                    </ul>
+                    </div>
+<!--                 
+                    <div class = "uk-align-right uk-margin-top " data-aos="zoom-in" >
+                        <span class="uk-margin-small-right uk-icon-button " uk-icon="mail"></span>
+                        <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
+                        <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
+                        <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
+                        <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
+                        <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
+                    </div>  -->
                 </div>
             </div>
-        </li>
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#" uk-slidenav-previous
-        uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover "href="#"  style="color:black;"uk-slidenav-next
-        uk-slideshow-item="next"></a>
-
-</div>
-
-
-    <!-- Footer -->
-    <div class="uk-section uk-section-secondary uk-light" >
-        <div uk-grid>
-            <div class="uk-align-left uk-margin-top">
-               <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
-
-            </div>
-           <div>
-          <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
-            <ul style="list-style-type: none; " class="uk-margin-top">
-                
-                <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left">Alumni</li>
-                <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="uk-margin-left">Gallery</li>
-                <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left">Events</li>
-                <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="uk-margin-left" >Stories</li>
-                <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="uk-margin-left">Dashboard</li>
-            </ul>
-            </div>
-        
-            <div class = "uk-align-right uk-margin-top" data-aos="zoom-in" >
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
-            </div> 
-        </div>
-    </div>
-
+                               
 </body>
-
 </html>

@@ -32,9 +32,23 @@
 
   <title>Alumni Site</title>
   <style>
-
-      @media only screen and (max-width: 640px) {
-
+    .adjust{
+      margin-left:5px;
+    }
+.content1{
+  margin-left:25%;
+  text-align:justify; 
+  margin-top:-20%
+}
+  @media only screen and (max-width: 640px) {
+    .adjust{
+      margin-left:20px;
+    }
+    .content1{
+  margin-left:0;
+  text-align:justify; 
+  margin-top:20%
+}
   .yu1{
                   margin-top:20% !important;
               }}
@@ -75,8 +89,10 @@
             <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png"
               class="uk-width-small uk-height-small" uk-img>
 
-            <input type="file">
-            <button class="uk-button uk-button-primary uk-margin-large-top" type="button">Upload</button>
+            <input type="file" id="img">
+            
+            <button class="uk-button uk-button-primary uk-margin-large-top" type="button"  onclick="upload()"
+             >Upload</button>
           </div>
 
           <!-- Number authentication alphanumeric value maybe check for the length -->
@@ -206,10 +222,10 @@
     <div class=" uk-navbar-left " style="overflow:hidden">
       <ul class="uk-navbar-nav">
         <li>
-          <a style="color:#1a275b !important;font-size:12px;">About Us</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;">Events</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Message From VC</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Feedback</a></li>
+          <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#event">Events</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#vc">Message From VC</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="#dash">Dashboard</a></li>
         <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
 
       </ul>
@@ -222,9 +238,9 @@
     </div>
     <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
       <ul class="uk-navbar-nav ">
-        <li><a style="color:#1a275b !important; font-size:12px;">Alumni Stories</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;">Gallery</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;" href="#">Contact Us</a></li>
+        <li><a style="color:#1a275b !important; font-size:12px;" href="#story123">Alumni Stories</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" onclick="alert('Due to admin panel work is going');">Gallery</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
         <li><a style="color:#1a275b !important;font-size:12px;" href="#">News</a></li>
 
       </ul>
@@ -320,22 +336,40 @@
     <hr class="uk-divider-small">
   </h3>
 
-  <div uk-gird>
-    <div class="uk-width-child-width-expand@s">
-      <img src="http://sayidan.kenzap.com/wp-content/uploads/2016/07/galery-popup-14-4-569x331.jpg" width="500px"
-        id="url" style="margin-left:3%;" height="300px" uk-img>
-      <div class="uk-align-right uk-width-1-2@s ty " >
-        <h2 class="font ty1" style="font-size:30px;font-weight: 700" id="name4"><b>Event Name</b></h2>
-        <span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"
-          id="Date">&nbsp;&nbsp;Jaipur
-        </span> <br>
-        <br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;Jaipur
-        </span>
+    <div class="uk-position-relative uk-visible-toggle uk-light" 
+    uk-slideshow=" min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
 
+    <ul class="uk-slideshow-items " id="call_e">
+      <li>
+          <div uk-gird id="event">
+              <div class="uk-width-child-width-expand@s">
+                <img src="Images/iop.png" width="500px"
+                  id="url" style="margin-left:3%;" height="300px" uk-img>
+                <div class="uk-align-right uk-width-1-2@s ty " >
+                  <h2 class="font ty1" style="font-size:30px;font-weight: 700; color:black" id="name4"><b>Event Name</b></h2>
+                  <span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"
+                    id="Date">&nbsp;&nbsp;Jaipur
+                  </span> <br>
+                  <br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;Jaipur
+                  </span>
+          
+          
+                  <p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">Event Description </p>
+                </div> 
+              </div>
+      </li>
+    
+      <!-- till here -->
+      
 
-        <p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">Event Description </p>
-      </div>
-    </div>
+  </ul>
+
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#"
+    uk-slidenav-previous uk-slideshow-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover " href="#" style="color:black;" uk-slidenav-next
+    uk-slideshow-item="next"></a>
+
+  </div>
 
   </div>
   <div class="uk-section">
@@ -345,7 +379,7 @@
   </h3>
 
 
-  <div class="uk-position-relative uk-visible-toggle uk-light"
+  <div class="uk-position-relative uk-visible-toggle uk-light" id="story123"
     uk-slideshow=" min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
 
     <ul class="uk-slideshow-items ">
@@ -353,21 +387,21 @@
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin " style="margin-top:2%"
           uk-grid>
           <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
-          <div class="uk-card-media-left uk-cover-container">
-            <img src="Images/yash.png" alt="" uk-cover>
+          <div class="uk-card-media-left uk-cover-container" >
+            <img src="Images/default.jpeg" alt="" uk-cover>
             <canvas width="100" height="400"></canvas>
           </div>
           <div>
             <div class="uk-card-body uk-animation-slide-right ">
               <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
-              <h3 class="uk-card-title " id="head">Media Left</h3>
-              <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+              <h3 class="uk-card-title " id="head">Sucess title</h3>
+              <p id="content">The default content is written Go and Post Your story With Us and got a part of a Alumni Website !!!!!
               </p>
 
               <p class="font uk-align-right" style="margin-right:9%" id="name5">Yash</p><br>
 
               <br>
-              <p class="font uk-align-right" style="margin-right:-19%;" id="batch">Batchvdvddv</p>
+              <p class="font uk-align-right" style="margin-right:-19%;" id="batch">Batch</p>
               <!-- <p class="font uk-align-right" style="margin-right:-9%;margin-top:12px;"id="course">Course</p> -->
 
             </div>
@@ -376,6 +410,7 @@
       </li>
       <li>
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top"
+         
           uk-grid>
           <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
           <div class="uk-card-media-left uk-cover-container">
@@ -418,14 +453,14 @@
 
   </div>
   </div>
-<div class=" uk-section yu1"
-  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1"style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
+<div class=" uk-section yu1">
+  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1" style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
     <hr class="uk-divider-small">
   </h3>
   
 
-    <div class="uk-child-width-expand@s " class="yu1">
-      <img src="http://sayidan.kenzap.com/wp-content/uploads/2016/07/galery-popup-14-4-569x331.jpg" 
+    <div class="uk-child-width-expand@s " class="yu1" id="dash">
+      <img src="Images/iop.png" 
         style="margin-left:3%;" class="uy3" uk-img>
       <div class="uk-align-right uk-width-1-2@s" style="margin-right:-3%">
         <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
@@ -453,12 +488,12 @@
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:9%"> Messgae from VC sir
     <hr class="uk-divider-small">
   </h3>
-  <div uk-gird>
+  <div uk-gird id="vc">
 
     <div class="uk-width-1-1">
-      <img src="https://www.amity.edu/jaipur/images/arun-patil.jpg" width="300px" class="uk-margin-medium-left"
-        style="margin-left:3%;" height="100px" uk-img>
-      <div class="uk-align-right uk-margin-medium-top " style="margin-right:3%; text-align:justify">
+      <img src="https://www.amity.edu/jaipur/images/arun-patil.jpg" width="300px" 
+        class="adjust" height="100px " uk-img>
+      <div class="uk-align-right  content1">
         Professor (Dr) Arun Patil is currently Vice-Chancellor and President of Amity University Rajasthan, India. Prior to this Professor Patil was Pro Vice-Chancellor and Pro-President at Amity University Rajasthan. Before moving to India, Professor Patil was Director of Postgraduate Coursework Studies and Director of Deakin Engineering Education Research (DEER) in the School of Engineering, Deakin University, Australia.
       </div>
     </div>
@@ -511,6 +546,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->

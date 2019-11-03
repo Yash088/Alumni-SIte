@@ -1,13 +1,16 @@
+call_event();
 if(localStorage.getItem('node')){
     var modal = UIkit.modal("#my_id");
     modal.hide();
     call_data();
+    
     call_story();
    
 
 }
 else{
 var modal = UIkit.modal("#my_id");
+
 modal.show();
 
 }
@@ -49,6 +52,7 @@ function sumbit() {
     var adder1 = document.getElementById('address');
     var alphaExp = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+   
     if (name1 !== "" && name1.match(alphaExp)) {
         if (select !== "Course") {
             if (syear !== "") {
@@ -61,6 +65,8 @@ function sumbit() {
                                         if (curcom !== "" && curcom.match(alphaExp)) {
                                             if (locate1 !== "" && locate1.match(alphaExp)) {
                                                 if (adder !== "") {
+                                                    // upload();
+                                                    // console.log(document.getElementById('img').value);
                                                     adding(select,syear,eyear,pemail,oemail,linkId1,skyId1,company,curcom,locate1,adder,phoneNumber1,aurId1,name1);
                                                 }
                                                 else {
@@ -128,6 +134,34 @@ function sumbit() {
         name2.focus();
     }
 }
+
+
+
+
+
+// function upload(){
+//     var photo=document.getElementById('img') ;
+//     var file=photo.files[0];
+//     console.log(photo,photo.files); 
+//     var storage = firebase.storage();
+//     var storageRef = storage.ref('/images'+file.name);
+//     var spaceRef = storageRef.put(file).then(function(snapshot) {
+//         console.log('Uploaded an array!');
+//       });
+      
+//       spaceRef.on('state_changed',function(snapshot){
+       
+//       },function(){
+//           var downloadURl =spaceRef.snapshot.downloadURL;
+//         console.log(downloadURL);
+//         }
+//       );
+  
+// }
+
+
+
+
 function adding(val,val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12,val13){
 var select=val;
 var syear=val1;
@@ -147,6 +181,7 @@ var name1=val13;
 var node=pemail.split("@");
 console.log(node);
 var db=firebase.database();
+
 db.ref('/alumni_info/'+node[0]).set(
     {
             "Address" : adder,
@@ -186,25 +221,46 @@ function call_data(){
     if(node){   
      db.ref('/alumni_info/'+node+'/').once('value',function(data){
          console.log(data.val());
-        console.log(data.val().Name)
+         console.log(data.val().Name)
         document.getElementById('name3').innerHTML=data.val().Name;
         document.getElementById('batch').innerHTML=data.val().Year;
         document.getElementById('e-mail').innerHTML=data.val().pemail;
         document.getElementById('AurID').innerHTML=data.val().AurId;
         console.log('YAsh');
-    
-        db.ref('/Events/node').once('value',function(data1){
-        console.log(data1.val().description)
-      document.getElementById('name4').innerHTML=data1.val().Name;
-      document.getElementById('Date').innerHTML="&nbsp;&nbsp;"+data1.val().date;
-      document.getElementById('descript').innerHTML =data1.val().description;
-      document.getElementById('locate').innerHTML="&nbsp;&nbsp;"+data1.val().location;
-      document.getElementById('url').src=data1.val().photo;
     });
-    });
-    
-
+    }
 }
+function call_event(){
+    var db=firebase.database();
+    db.ref('/Events/').on('child_added',function(data){
+        var name=data.val().Name;
+        var day=data.val().date;
+        var dec=data.val().description;
+        var url=data.val().photo;
+        var locate=data.val().location;
+        console.log(name);
+        console.log(day);
+        console.log(dec);
+        console.log(url);
+        console.log(locate);
+        document.getElementById('call_e').innerHTML= document.getElementById('call_e').innerHTML +  '<li>'+
+        '<div uk-gird id="event">'+
+        '<div class="uk-width-child-width-expand@s">'+
+          '<img src="'+url+'" width="500px"'+
+           'id="url" style="margin-left:3%;" height="300px" uk-img>'+
+          '<div class="uk-align-right uk-width-1-2@s ty " >'+
+            '<h2 class="font ty1" style="font-size:30px;font-weight: 700;color:black" id="name4"><b>'+name+'</b></h2>'+
+            '<span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"'+
+             ' id="Date">&nbsp;&nbsp;'+locate+
+            '</span> <br>'+
+            '<br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;'+day+
+            '</span>'+
+            '<p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">'+dec+
+            ' </p>'+
+          '</div>'+ 
+        '</div>'+
+        '</li>';
+    });
 }
 function call_story(){
     
