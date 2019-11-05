@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Slider</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
+<link rel="stylesheet" href="style.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ntegrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <style>
+    
+.post-slide6{
+    margin: 0 10px;
+    border-left: 8px solid #1dcfd1;
+    border-bottom: 8px solid #1dcfd1;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+    margin-bottom:2em;
+    width:400px !important ;
+    height:auto !important;
+}
+
+
+ .icons{
+    width: 90px;
+    height: 90px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    right:4px;
+    top:215px;
+    float:right;
+    overflow: hidden;
+}
+.icons img{
+    width: 100%;
+    height: auto;
+}
+ .post-title{
+    margin: 0 0 25px 0;
+}
+.post-title a{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #1dcfd1;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.30s linear 0s;
+}
+.post-title a:hover{
+    text-decoration: none;
+    color: #555;
+}
+ .post-description{
+    color: #555;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 20px;
+
+}
+/* .post-slide6 .read{
+    font-size: 13px;
+    color: #555;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+}
+.post-slide6 .read:hover{
+    text-decoration:none;
+    color: #1dcfd1;
+} */
+.read-more{
+    color:#555;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+    position: relative;
+    transition: color 0.20s linear;
+}
+ .read-more:hover{
+    text-decoration:none;
+    color:#ff8b3d;
+}
+ .read-more:after{
+    content:"";
+    position: absolute;
+    width:30%;
+    display: block;
+    border:1px solid #ff8b3d;
+    transition: all 0.30s ease;
+}
+ .read-more:hover:after{
+    width:100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+    </style>
+    </head>
+    <body>
+            <!-- <div class="container">
+                    <h3 class="h3">New slider Demo - 6</h3>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div id="news-slider6" class="owl-carousel">
+                                <div class="post-slide6">
+                                    <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-1.jpg" alt="">
+                                        <div class="post-info">
+                                            <ul class="category">
+                                                <li>in <a href="#">Graphics</a></li>
+                                                <li>by <a href="#">admin</a></li>
+                                            </ul>
+                                            <span class="post-date">May 05, 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-review" style="float:right;">
+                                        <span class="icons">
+                                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-5.jpg" alt="">
+                                        </span>
+                                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                                        <a href="#" class="read">read more</a>
+                                    </div>
+                                </div>
+                 
+                                <div class="post-slide6">
+                                    <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-2.jpg" alt="">
+                                        <div class="post-info">
+                                            <ul class="category">
+                                                <li>in <a href="#">Graphics</a></li>
+                                                <li>by <a href="#">admin</a></li>
+                                            </ul>
+                                            <span class="post-date">May 07, 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-review">
+                                        <span class="icons">
+                                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-6.jpg" alt="">
+                                        </span>
+                                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                                        <a href="#" class="read">read more</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="post-slide6">
+                                    <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-3.jpg" alt="">
+                                        <div class="post-info">
+                                            <ul class="category">
+                                                <li>in <a href="#">Graphics</a></li>
+                                                <li>by <a href="#">admin</a></li>
+                                            </ul>
+                                            <span class="post-date">May 07, 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-review">
+                                        <span class="icons">
+                                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-6.jpg" alt="">
+                                        </span>
+                                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                                        <a href="#" class="read">read more</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="post-slide6">
+                                    <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" alt="">
+                                        <div class="post-info">
+                                            <ul class="category">
+                                                <li>in <a href="#">Graphics</a></li>
+                                                <li>by <a href="#">admin</a></li>
+                                            </ul>
+                                            <span class="post-date">May 07, 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-review">
+                                        <span class="icons">
+                                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                        </span>
+                                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                        <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                                        <a href="#" class="read">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+    
+                   <div  class="container">
+                    <div class="row">
+                    <div  >
+                    <div class="post-slide6">
+                        <div class="post-img">
+                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" alt="">
+                      
+                        </div>
+                        <div class="post-review">
+                            <span class="icons">
+                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                            </span>
+                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                         </div>
+                         </div>
+                    </div>
+                    </div>
+                    <div  style="border:1px soild red;" >
+                        <div class="post-slide6">
+                            <div class="post-img">
+                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" alt="">
+                          
+                            </div>
+                            <div class="post-review">
+                                <span class="icons">
+                                    <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                </span>
+                                <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                             </div>
+                             </div>
+                        </div>
+                        </div>
+        
+                    </div>
+                </div> -->
+                
+                      
+
+
+
+
+
+
+
+
+
+
+                
+
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                            <div class="container-fluid">
+                                    <div class="row">
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more " >read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div> <div class="card post-slide6" style="width: 18rem; margin-right:-120px!important" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                    
+                                    </div>
+                                    </div>
+                      </div>
+                      <div class="carousel-item">
+                            <div class="container-fluid">
+                                    <div class="row">
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div> <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                    
+                                    </div>
+                                    </div>
+                    </div>
+                      <div class="carousel-item">
+                            <div class="container-fluid">
+                                    <div class="row">
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div> <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="icons">
+                                                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="read-more">read more</a>
+
+                                        </div>
+                                      
+                                    </div>
+                    
+                                    </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <!-- <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          </ol> -->
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span style="margin-right:120px !important;"class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only" style="color:black !important;">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span  class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span  class="sr-only ">Next</span>
+                    </a>
+                  </div>
+
+
+
+
+
+
+                <!-- <div class="container-fluid">
+                <div class="row">
+                <div class="card post-slide6" style="width: 18rem;" >
+                    <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="icons">
+                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                        </span>
+                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                        <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                    </div>
+                  
+                </div>
+                <div class="card post-slide6" style="width: 18rem;" >
+                    <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="icons">
+                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                        </span>
+                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                        <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                    </div>
+                  
+                </div> <div class="card post-slide6" style="width: 18rem;" >
+                    <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="icons">
+                            <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-7.jpg" alt="">
+                        </span>
+                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                        <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                    </div>
+                  
+                </div>
+
+                </div>
+                </div> -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+   <script>
+                $("#news-slider6").owlCarousel({
+                    items : 3,
+                    itemsDesktop:[1199,3],
+                    itemsDesktopSmall:[980,2],
+                    itemsMobile : [600,1],
+                    pagination:false,
+                    navigationText:false
+                });
+            </script>    
+                </body>
+</html>

@@ -125,10 +125,10 @@
         
                 <form class="uk-grid-small uk-margin-large-top" uk-grid>
                   <div class="uk-flex uk-flex-column uk-align-center" uk-form-custom>
-                    <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png"
+                    <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" id="photu"
                       class="uk-width-small uk-height-small" uk-img>
         
-                    <input type="file">
+                    <input type="file" id="img">
                     <button class="uk-button uk-button-primary uk-margin-large-top" type="button">Upload</button>
                   </div>
         
@@ -284,6 +284,9 @@ function value(){
 db.ref('/alumni_info/'+localStorage.getItem('node')+'/').once('value',function(data){
     console.log(data.val());
     
+    
+    if(data.val().photo=="Not Uploaded"){
+    
     document.getElementById('address').value=data.val().Address;
     document.getElementById('aurId').value=data.val().AurId;
     document.getElementById('cucom').value=data.val().Company;
@@ -303,7 +306,32 @@ db.ref('/alumni_info/'+localStorage.getItem('node')+'/').once('value',function(d
     document.getElementById('emailo').value=data.val().omail;
     document.getElementById('emailp').value=data.val().pemail;
     document.getElementById('skyId').value=data.val().skypeId;
-});
+    }
+    else{
+      document.getElementById('address').value=data.val().Address;
+    document.getElementById('aurId').value=data.val().AurId;
+    document.getElementById('cucom').value=data.val().Company;
+    document.getElementById('option1').value=data.val().Course;
+    document.getElementById('designation').value=data.val().Designation;
+    document.getElementById('name').value=data.val().Name;
+    document.getElementById('photu').src=data.val().photo;
+    document.getElementById('phoneNumber').value=data.val().Phone;
+    console.log(data.val().Year);
+    var saal=data.val().Year;
+    console.log(saal);
+    var year4=saal.split("-");
+    console.log(year4);
+    document.getElementById('year').value=year4[0];
+    document.getElementById('year1').value=year4[1];
+    document.getElementById('linkId').value=data.val().linkdin;
+    document.getElementById('location').value=data.val().location;
+    document.getElementById('emailo').value=data.val().omail;
+    document.getElementById('emailp').value=data.val().pemail;
+    document.getElementById('skyId').value=data.val().skypeId;
+      
+    }
+  });
+
 }
  else{
      alert("There is no node of your Data");
@@ -419,8 +447,11 @@ function sumbit() {
         name2.focus();
     }
 }
+
+
+
 function adding(val,val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12,val13){
-var select=val;
+ var select=val;
 var syear=val1;
 var eyear=val2;
 var pemail=val3;
@@ -438,31 +469,77 @@ var name1=val13;
 var node=pemail.split("@");
 console.log(node);
 var db=firebase.database();
-db.ref('/alumni_info/'+node[0]).set(
-    {
-            "Address" : adder,
-            "AurId" : aurId1,
-            "Company" : company,
-            "Course" : select,
-            //"DOB" : 12345678909090,
-            "Designation" : curcom,
-            "Name" : name1,
-            "oemail" : oemail,
-            "pemail" : pemail,
-            "Phone" : phoneNumber1,
-            "Year" : syear+"-"+eyear,
-            "linkdin" : linkId1,
-            "location" : locate1,
-            "skypeId" : skyId1,
-            "uid" : "123456"
-          
-        
-    }
-    );
+var photo=document.getElementById('img') ;
+var file=photo.files[0];
+console.log(file);
+
+
+if(photo.files.length == 0){
+    db.ref('/alumni_info/'+node[0]).set(
+        {
+                "Address" : adder,
+                "AurId" : aurId1,
+                "Company" : company,
+                "Course" : select,
+                //"DOB" : 12345678909090,
+                "Designation" : curcom,
+                "Name" : name1,
+                "oemail" : oemail,
+                "pemail" : pemail,
+                "Phone" : phoneNumber1,
+                "Year" : syear+"-"+eyear,
+                "linkdin" : linkId1,
+                "location" : locate1,
+                "skypeId" : skyId1,
+                "uid" : "123456",
+                 "photo":"Not Uploaded"       
+            
+        }
+        );
+}
+else{
+var storage = firebase.storage();
+var storageRef = storage.ref('/images/'+file.name);
+var uploadTask = storageRef.put(file); 
+uploadTask.on('state_changed', function(snapshot){ 
+}, function(error) {console.log(error); 
+}, function() { 
+
+   // get the uploaded image url back 
+   uploadTask.snapshot.ref.getDownloadURL().then( 
+    function(downloadURL) { 
+
+   // You get your url from here 
+    console.log('File available at', downloadURL); 
+
+
+    db.ref('/alumni_info/'+node[0]).set(
+        {
+                "Address" : adder,
+                "AurId" : aurId1,
+                "Company" : company,
+                "Course" : select,
+                //"DOB" : 12345678909090,
+                "Designation" : curcom,
+                "Name" : name1,
+                "oemail" : oemail,
+                "pemail" : pemail,
+                "Phone" : phoneNumber1,
+                "Year" : syear+"-"+eyear,
+                "linkdin" : linkId1,
+                "location" : locate1,
+                "skypeId" : skyId1,
+                "uid" : "123456",
+                 "photo":downloadURL       
+            
+        }
+        );
+}); 
+});
+}
     localStorage.setItem("name",name1);
     localStorage.setItem("node",node[0]);
-    localStorage.setItem("uid","123456");
-    console.log("Node is created");
+    localStorage.setItem("uid","123456");    console.log("Node is created");
     var y=confirm("You want to go to main page ");
     if(y==true){
         location.href="first.html";

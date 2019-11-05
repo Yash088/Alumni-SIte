@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Slider</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
+<link rel="stylesheet" href="style.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ntegrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <style>
+    
+.post-slide6{
+    margin: 0 10px;
+    border-left: 8px solid #153373;
+    border-bottom: 8px solid #153373;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+    margin-bottom:2em;
+    width:400px !important ;
+    height:auto !important;
+}
+
+
+
+ .post-title{
+    margin: 0 0 25px 0;
+}
+.post-title a{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #153373;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.30s linear 0s;
+}
+.post-title a:hover{
+    text-decoration: none;
+    color: #555;
+}
+ .post-description{
+    color: #555;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 20px;
+
+}
+
+.read-more{
+    color:#555;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+    position: relative;
+    transition: color 0.20s linear;
+}
+ .read-more:hover{
+    text-decoration:none;
+    color:#ff8b3d;
+}
+ .read-more:after{
+    content:"";
+    position: absolute;
+    width:30%;
+    display: block;
+    border:1px solid #ff8b3d;
+    transition: all 0.30s ease;
+}
+ .read-more:hover:after{
+    width:100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+ .post-review{
+    padding: 35px 20px 25px;
+    background: #fff;
+    position: relative;
+}
+.post-slide6 .icons{
+    width: 90px;
+    height: 90px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    overflow: hidden;
+}
+.post-slide6 .icons img{
+    width: 100%;
+    height: auto;
+}
+.post-img{
+    position: relative;
+    overflow: hidden;
+}
+    </style>
+    </head>
+    <body onload="story()">
+           
+                <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+                        <ul style="list-style-type: none;padding:5px;">
+                          
+                          <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+                          <li style="float:left;"><a style="text-decoration: none;"><h4 style="color:white">Stroies</h4></a></li>
+                          <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+                    
+                    
+                        </ul>
+                    
+                      </div>
+                    
+                      <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+                        <div class=" uk-navbar-left " style="overflow:hidden">
+                          <ul class="uk-navbar-nav">
+                            <li>
+                              <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" href="#event">Events</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" href="#vc">Message From VC</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" href="#dash">Dashboard</a></li>
+                            <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+                    
+                          </ul>
+                        </div>
+                        <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+                          <li style="list-style-type: none;">
+                            <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+                          </li>
+                    
+                        </div>
+                        <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
+                          <ul class="uk-navbar-nav ">
+                            <li><a style="color:#1a275b !important; font-size:12px;" href="#story123">Alumni Stories</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" onclick="alert('Due to admin panel work is going');">Gallery</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
+                            <li><a style="color:#1a275b !important;font-size:12px;" href="#">News</a></li>
+                    
+                          </ul>
+                        </div>
+                    
+                    
+                      </nav>
+                      <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+                        <div>
+                            <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+                        </div>
+                        <div class="uk-navbar-right">
+                             
+                    
+                                <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                                             style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                                
+                        </div>
+                      </div>
+                    
+                    
+                                 
+                       <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                                    <div class="uk-offcanvas-bar">
+                        
+                                        <ul class="uk-nav uk-nav-default">
+                                            <li class="uk-active" ><a href="#">About Us</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Login</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Message from VC</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Feedback</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Contact Us</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Job Openings</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Photo Gallery</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Events invite notice</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">News Room</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li class="uk-active"><a href="#">Group Members</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                        </ul>
+                        
+                                    </div>
+                                
+                                  </div> 
+                            <div class="container-fluid" style="margin-top:90px;">
+                                    <div class="row" id="Story">
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="...">
+                                    </div>
+                                        <div class="card-body post-review">
+                                            <span class="icons">
+                                                <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                           
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="card post-slide6" style="width: 18rem;" >
+                                        <div class="post-img">
+                                        <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+                                    </div>
+                                        <div class="card-body post-review">
+                                            <span class="icons">
+                                                <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                           
+                                        </div>
+                                      
+                                    </div> <div class="card post-slide6" style="width: 18rem;" >
+                                        <img src="Images/back.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body post-review">
+                                            <span class="icons">
+                                                <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">
+                                            </span>
+                                            <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    
+                                            <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                      
+                                    </div>
+                    
+                                    </div>
+                                    </div>
+                      </div>
+                      <div class="uk-section uk-section-secondary uk-light uk-margin-large-top">
+                        <div uk-grid>
+                          <div class="uk-align-left uk-margin-top">
+                            <img class="uk-margin-left" src="https://amity.edu/images/logo.png" height="120px" width="250px">
+                    
+                          </div>
+                          <div>
+                            <center>
+                              <h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">
+                                UNIVERSITY</h6>
+                            </center>
+                            <ul style="list-style-type: none; " class="uk-margin-top">
+                    
+                              <li
+                                style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
+                                class="uk-margin-left">Alumni</li>
+                              <li
+                                style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
+                                class="uk-margin-left">Gallery</li>
+                              <li
+                                style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
+                                class="uk-margin-left">Events</li>
+                              <li
+                                style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
+                                class="uk-margin-left">Stories</li>
+                              <li
+                                style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
+                                class="uk-margin-left">Dashboard</li>
+                            </ul>
+                          </div>
+                    
+                          <div class="uk-align-right uk-margin-top" data-aos="zoom-in">
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
+                            <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+                      <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+                      <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+                      <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
+                    
+                      <!-- TODO: Add SDKs for Firebase products that you want to use
+                           https://firebase.google.com/docs/web/setup#available-libraries -->
+                    
+                      <script>
+                        // Your web app's Firebase configuration
+                        var firebaseConfig = {
+                          apiKey: "AIzaSyD0lotM6kyH6o8wcDx-RjLcuVNvGAWKTVE",
+                          authDomain: "alumni-24c48.firebaseapp.com",
+                          databaseURL: "https://alumni-24c48.firebaseio.com",
+                          projectId: "alumni-24c48",
+                          storageBucket: "alumni-24c48.appspot.com",
+                          messagingSenderId: "734371845562",
+                          appId: "1:734371845562:web:5fc4bd8fa9fec40d6cf983"
+                        };
+                        // Initialize Firebase
+                        firebase.initializeApp(firebaseConfig);
+                      </script>                      
+<script>
+
+        function story(){ 
+         var db= firebase.database();
+          db.ref('/Stories/').on('child_added',function(data){
+            db.ref('/Stories/'+data.key).on('value',function(data1){
+         if(data1.val().Photo !=="Not Uploaded"){   
+                console.log("here");
+                                    console.log(data1.val().Photo);       
+                                    document.getElementById('Story').innerHTML= document.getElementById('Story').innerHTML+
+                     '<div class="card post-slide6" style="width: 18rem;" >'+
+                                        '<div class="post-img">'+
+                                        '<img src="'+data1.val().Photo+'" class="card-img-top" alt="...">'+
+                                        '</div>'+
+                                        '<div class="card-body post-review">'+
+                                           ' <span class="icons">'+
+                                                '<img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">'+
+                                            '</span>'+
+                                            '<h3 class="post-title"><a href="#">'+data1.val().Name+'</a></h3>'+
+                    
+                                           ' <p class="card-text post-description" >'+data1.val().Story+'</p>'+
+                                           
+
+                                        '</div>'+
+                                      
+                                    '</div>';
+                                           }
+                                           else{
+                                    console.log("There");            
+                     document.getElementById('Story').innerHTML= document.getElementById('Story').innerHTML+
+                     '<div class="card post-slide6" style="width: 18rem;" >'+
+                                        '<div class="post-img">'+
+                                        '<img src="Images/back.jpg" class="card-img-top" alt="...">'+
+                                        '</div>'+
+                                        '<div class="card-body post-review">'+
+                                           ' <span class="icons">'+
+                                                '<img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">'+
+                                            '</span>'+
+                                            '<h3 class="post-title"><a href="#">'+data1.val().Name+'</a></h3>'+
+                    
+                                           ' <p class="card-text post-description" >'+data1.val().Story+'</p>'+
+                                           
+
+                                        '</div>'+
+                                      
+                                    '</div>';
+                                           }
+                                           
+                                });
+          });
+        }
+</script>
+                </body>
+</html>

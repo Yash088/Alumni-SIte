@@ -140,28 +140,28 @@ function sumbit() {
 
 
 // function upload(){
+//     console.log("Here");
 //     var photo=document.getElementById('img') ;
 //     var file=photo.files[0];
 //     console.log(photo,photo.files); 
 //     var storage = firebase.storage();
-//     var storageRef = storage.ref('/images'+file.name);
-//     var spaceRef = storageRef.put(file).then(function(snapshot) {
-//         console.log('Uploaded an array!');
-//       });
-      
-//       spaceRef.on('state_changed',function(snapshot){
-       
-//       },function(){
-//           var downloadURl =spaceRef.snapshot.downloadURL;
-//         console.log(downloadURL);
-//         }
-//       );
+//     var storageRef = storage.ref('/images/'+file.name);
+//    var uploadTask = storageRef.put(file); 
+//    uploadTask.on('state_changed', function(snapshot){ 
+//   }, function(error) {console.log(error); 
+//   }, function() { 
+
+//        // get the uploaded image url back 
+//        uploadTask.snapshot.ref.getDownloadURL().then( 
+//         function(downloadURL) { 
+
+//        // You get your url from here 
+//         console.log('File available at', downloadURL); 
+
   
-// }
-
-
-
-
+//     }); 
+//   }); 
+// }; 
 function adding(val,val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12,val13){
 var select=val;
 var syear=val1;
@@ -181,28 +181,74 @@ var name1=val13;
 var node=pemail.split("@");
 console.log(node);
 var db=firebase.database();
+var photo=document.getElementById('img') ;
+var file=photo.files[0];
+console.log(file);
 
-db.ref('/alumni_info/'+node[0]).set(
-    {
-            "Address" : adder,
-            "AurId" : aurId1,
-            "Company" : company,
-            "Course" : select,
-            //"DOB" : 12345678909090,
-            "Designation" : curcom,
-            "Name" : name1,
-            "oemail" : oemail,
-            "pemail" : pemail,
-            "Phone" : phoneNumber1,
-            "Year" : syear+"-"+eyear,
-            "linkdin" : linkId1,
-            "location" : locate1,
-            "skypeId" : skyId1,
-            "uid" : "123456"
-          
-        
-    }
-    );
+
+if(photo.files.length == 0){
+    db.ref('/alumni_info/'+node[0]).set(
+        {
+                "Address" : adder,
+                "AurId" : aurId1,
+                "Company" : company,
+                "Course" : select,
+                //"DOB" : 12345678909090,
+                "Designation" : curcom,
+                "Name" : name1,
+                "oemail" : oemail,
+                "pemail" : pemail,
+                "Phone" : phoneNumber1,
+                "Year" : syear+"-"+eyear,
+                "linkdin" : linkId1,
+                "location" : locate1,
+                "skypeId" : skyId1,
+                "uid" : "123456",
+                 "photo":"Not Uploaded"       
+            
+        }
+        );
+}
+else{
+var storage = firebase.storage();
+var storageRef = storage.ref('/images/'+file.name);
+var uploadTask = storageRef.put(file); 
+uploadTask.on('state_changed', function(snapshot){ 
+}, function(error) {console.log(error); 
+}, function() { 
+
+   // get the uploaded image url back 
+   uploadTask.snapshot.ref.getDownloadURL().then( 
+    function(downloadURL) { 
+
+   // You get your url from here 
+    console.log('File available at', downloadURL); 
+
+
+    db.ref('/alumni_info/'+node[0]).set(
+        {
+                "Address" : adder,
+                "AurId" : aurId1,
+                "Company" : company,
+                "Course" : select,
+                //"DOB" : 12345678909090,
+                "Designation" : curcom,
+                "Name" : name1,
+                "oemail" : oemail,
+                "pemail" : pemail,
+                "Phone" : phoneNumber1,
+                "Year" : syear+"-"+eyear,
+                "linkdin" : linkId1,
+                "location" : locate1,
+                "skypeId" : skyId1,
+                "uid" : "123456",
+                 "photo":downloadURL       
+            
+        }
+        );
+}); 
+});
+}
     localStorage.setItem("name",name1);
     localStorage.setItem("node",node[0]);
     localStorage.setItem("uid","123456");
@@ -274,7 +320,7 @@ function call_story(){
                 db.ref('/Stories/'+node).once('value',function(data2){
                       
                       document.getElementById('batch').innerHTML='<span class="font">Batch : <span>'+data2.val().Batch;
-                    //   document.getElementById('course').innerHTML=data2.val().Course;
+                    
                       document.getElementById('name5').innerHTML=data2.val().Name;
                       document.getElementById('content').innerHTML=data2.val().Story;
                       document.getElementById('head').innerHTML=data2.val().Title;

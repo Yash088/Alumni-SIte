@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <script src="https://use.fontawesome.com/4c69587182.js"></script>
+
+<style>
+  #b {
+            visibility: hidden;
+        }
+
+        #log_code {
+            visibility: hidden;
+        }
+</style>
+</head>
+<body>
+    <div class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+        <div class="uk-width-1-1">
+            <div class="uk-container">
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                    <div class="uk-width-1-1@m">
+                        <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                            <li id="login">
+                                <h3 class="uk-card-title uk-text-center">Welcome Back !</h3>
+                                
+
+
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                                        <input class="uk-input uk-form-large" value="+91" id="phone1" type="tel">
+                            
+                                    </div>
+                                    <div class="uk-text-danger"id="invalid4"></div>
+                                </div>
+                                
+                                <div class="uk-margin" id="log_code">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <input class="uk-input uk-form-large" placeholder="Code" id="log_code1"
+                                        maxlength="6" type="tel">
+                                    </div>
+                                    <div class="uk-text-danger"id="invalid6"></div>
+                                </div>
+
+                                <div class="uk-margin" id="log" style="visibility: visible">
+                                    <button id="submit" onclick="logval()"
+                                        class="uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
+                                </div>
+
+                                <div class="uk-margin" id="log1" style="visibility: hidden">
+                                    <button id="submit1" onclick="valid_log_code()"
+                                        class="uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
+                                </div>
+                                
+                                </form>
+                            </li>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD0lotM6kyH6o8wcDx-RjLcuVNvGAWKTVE",
+    authDomain: "alumni-24c48.firebaseapp.com",
+    databaseURL: "https://alumni-24c48.firebaseio.com",
+    projectId: "alumni-24c48",
+    storageBucket: "alumni-24c48.appspot.com",
+    messagingSenderId: "734371845562",
+    appId: "1:734371845562:web:5fc4bd8fa9fec40d6cf983"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+   
+    <script>
+     function logval() {
+            var no1 = document.getElementById('phone1').value;
+            var no3 = document.getElementById('phone1');
+            if (no1 !== "") {
+                if (no1.match('[+]+[9]+[1]+[0-9]{10}')) {
+                     
+                     login();
+                
+                }
+                else {
+                    no3.focus();
+                    document.getElementById('invalid4').innerHTML="Invalid num";
+                    console.log("please write number  in format +91...")
+                }
+            }
+            else {
+                
+                no3.focus();
+                document.getElementById('invalid4').innerHTML="Fill the Num";
+                console.log('please fill the form');
+            }
+        }
+          function login() {
+
+            var a = document.getElementById("phone1").value;
+            if (a == "") {
+              alert("Please enter your number");
+            } 
+            else {
+              window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('submit', {
+                'size': 'invisible',
+                'callback': function (response) {
+                  // reCAPTCHA solved, allow signInWithPhoneNumber.
+                  console.log("Captcha Resolved..")
+                }
+              });
+
+              var num = document.getElementById("phone1").value;
+              
+              console.log(num);
+              var db = firebase.database();
+              db.ref('/users/admin/').once('value', function (data) {
+               console.log(data.val());
+                if (data.hasChild(num)) {
+                  var appVerifier = window.recaptchaVerifier;
+                  console.log("Sending final Data");
+                  firebase.auth().signInWithPhoneNumber(num, appVerifier)
+                    .then(function (confirmationResult) {
+                      document.getElementById("log_code").style.visibility = "visible";
+                      document.getElementById("log").style.visibility = "hidden";
+                      document.getElementById("log1").style.visibility = "visible";
+                      window.confirmationResult = confirmationResult;
+                      console.log("Yash ");
+                    }).catch(function (error) {
+                      console.log(error);
+                      
+                    });
+                    
+
+                  }
+                else {
+                  alert("Please Take auth from admin");
+                }
+              });
+              
+
+
+            }
+
+          }
+          function valid_log_code(){
+            var code = document.getElementById('log_code1').value;
+            var code3 = document.getElementById('log_code1');
+            console.log("here")
+            if(code!==""){
+            if(code.match('^[0-9]{6}')){
+                login_confirm();
+            }
+            else{
+                code3.focus();
+                document.getElementById('invalid6').innerHTML="*Only numbers";    
+                console.log("please fill the code /only integers")
+            }
+            }
+            else{
+              code3.focus();
+              document.getElementById('invalid6').innerHTML="*Please Fil this";
+              console.log("Empty code please fill the code");
+            }
+          }
+          function login_confirm() {
+            var code = document.getElementById('log_code1').value;
+            
+            confirmationResult.confirm(code).then(function (result) {
+              // User signed in successfully.
+              
+              window.location="admin_panel1.html";
+              
+              
+
+                // ...
+            }).catch(function (error) {
+                // User couldn't sign in (bad verification code?)
+                // ...
+                console.log(error);
+                location.reload();
+
+            });
+
+
+        }
+      
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+.content{
+             margin-top:80px !important;
+    }
+    .leaders{
+      margin-left:230px;
+    }
+    .show{
+      display: none !important;
+    }
+    @media only screen and (max-width: 1024px) {
+        .content{
+            margin-top:80px !important;
+        }
+        .hide{
+          display:none !important;
+        }
+        .show{
+          display:flex !important;
+        }
+    }
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999% !important;
+    margin: 6px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100% !important;
+  }
+}
+
+.clearfix:after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+}
+</style>
+</head>
+ <body onload="load()">
+      <div class=" hide"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+            <ul style="list-style-type: none;padding:5px;">
+                    <li style="float:left; margin-right:15px;"><a style="text-decoration: none;">            <h3 style="color:white">About Us</h3></a></li>
+    
+              <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+              <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+        
+        
+            </ul>
+        
+          </div>
+         
+      <nav class=" uk-navbar-container uk-visible@m hide" style="height:70px;" uk-navbar>
+            <div class=" uk-navbar-left " style="overflow:hidden">
+              <ul class="uk-navbar-nav">
+                <li>
+                  <a style="color:#1a275b !important;font-size:12px;">About Us</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;">Events</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;" href="#">Message From VC</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;" href="#">Feedback</a></li>
+                 <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+        
+             </ul>
+            </div>
+            <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+              <li style="list-style-type: none;">
+                <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+              </li>
+        
+            </div>
+            <div class=" uk-navbar-right uk-visible@m hide" style="overflow:hidden">
+              <ul class="uk-navbar-nav ">
+                <li><a style="color:#1a275b !important; font-size:12px;">Alumni Stories</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;">Gallery</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;" href="#">Contact Us</a></li>
+                <li><a style="color:#1a275b !important;font-size:12px;" href="#">News</a></li>
+        
+              </ul>
+            </div>
+        
+        
+          </nav>
+          <div class=" show" style="background-color:#153373;"uk-navbar>
+            <div>
+                <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+            </div>
+            <div class="uk-navbar-right ">
+                 
+        
+                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                                 style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                    
+            </div>
+          </div>
+        
+        
+                     
+           <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                        <div class="uk-offcanvas-bar">
+            
+                            <ul class="uk-nav uk-nav-default">
+                                <li class="uk-active" ><a href="#">About Us</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Login</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Message from VC</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Feedback</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Contact Us</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Job Openings</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Photo Gallery</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Events invite notice</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">News Room</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li class="uk-active"><a href="#">Group Members</a></li>
+                                <li class="uk-nav-divider"></li>
+                            </ul>
+            
+                        </div>
+                    
+                      </div>
+<div style="margin-top:30px;"id="photo123">
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<div>
+
+</div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD0lotM6kyH6o8wcDx-RjLcuVNvGAWKTVE",
+    authDomain: "alumni-24c48.firebaseapp.com",
+    databaseURL: "https://alumni-24c48.firebaseio.com",
+    projectId: "alumni-24c48",
+    storageBucket: "alumni-24c48.appspot.com",
+    messagingSenderId: "734371845562",
+    appId: "1:734371845562:web:5fc4bd8fa9fec40d6cf983"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+function load(){
+  var db=firebase.database();
+  db.ref('/photos/').on('child_added',function(data){
+ console.log(data.key);
+ db.ref('/photos/'+data.key).on('value',function(data1){
+  console.log(data1.val().photo);
+  document.getElementById('photo123').innerHTML=document.getElementById('photo123').innerHTML+
+   '<div style="margin-top:20px;"class="responsive">'+
+  '<div class="gallery">'+
+    '<a target="_blank" href="'+ data1.val().photo+'">'+
+      '<img src="'+data1.val().photo+'" alt="Mountains" width="600" height="400">'+
+    '</a>'+
+  '</div>'+
+'</div>';
+ });
+  });
+}
+</script>
+</body>
+</html>

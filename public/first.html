@@ -21,17 +21,112 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ntegrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <title>Alumni Site</title>
   <style>
+       
+.post-slide6{
+    margin: 0 10px;
+    border-left: 8px solid #153373;
+    border-bottom: 8px solid #153373;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+    margin-bottom:2em;
+    width:400px !important ;
+    height:auto !important;
+}
+
+
+
+ .post-title{
+    margin: 0 0 25px 0;
+}
+.post-title a{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #153373;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.30s linear 0s;
+}
+.post-title a:hover{
+    text-decoration: none;
+    color: #555;
+}
+ .post-description{
+    color: #555;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 20px;
+
+}
+
+.read-more{
+    color:#555;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+    position: relative;
+    transition: color 0.20s linear;
+}
+ .read-more:hover{
+    text-decoration:none;
+    color:#ff8b3d;
+}
+ .read-more:after{
+    content:"";
+    position: absolute;
+    width:30%;
+    display: block;
+    border:1px solid #ff8b3d;
+    transition: all 0.30s ease;
+}
+ .read-more:hover:after{
+    width:100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+ .post-review{
+    padding: 35px 20px 25px;
+    background: #fff;
+    position: relative;
+}
+.post-slide6 .icons{
+    width: 90px;
+    height: 90px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    overflow: hidden;
+}
+.post-slide6 .icons img{
+    width: 100%;
+    height: auto;
+}
+.post-img{
+    position: relative;
+    overflow: hidden;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+
     .adjust{
       margin-left:5px;
     }
@@ -40,6 +135,66 @@
   text-align:justify; 
   margin-top:-20%
 }
+.isteColor{
+    color: #FCD12A;
+  }
+  .isteColor:hover{
+    color: #353A40;
+  }
+/*haber akışı list*/
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #153373;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+vertical carousel
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carouselitem-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+ 
+ 
   @media only screen and (max-width: 640px) {
     .adjust{
       margin-left:20px;
@@ -51,7 +206,8 @@
 }
   .yu1{
                   margin-top:20% !important;
-              }}
+              }
+            }
   </style>
 </head>
 
@@ -74,7 +230,7 @@
 
     </form>
   </div>
-  </div>
+  
 
 
   <div id="my_id" uk-modal>
@@ -335,9 +491,9 @@
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Upcoming Events
     <hr class="uk-divider-small">
   </h3>
-
-    <div class="uk-position-relative uk-visible-toggle uk-light" 
-    uk-slideshow=" min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
+<!-- <div class="uk-section">
+    <div class="uk-position-relative uk-visible-toggle uk-light adjust23" 
+    uk-slideshow="  finite:true; animation: push " tabindex="-1">
 
     <ul class="uk-slideshow-items " id="call_e">
       <li>
@@ -345,7 +501,7 @@
               <div class="uk-width-child-width-expand@s">
                 <img src="Images/iop.png" width="500px"
                   id="url" style="margin-left:3%;" height="300px" uk-img>
-                <div class="uk-align-right uk-width-1-2@s ty " >
+                <div class="uk-align-right uk-width-1-2@s  " >
                   <h2 class="font ty1" style="font-size:30px;font-weight: 700; color:black" id="name4"><b>Event Name</b></h2>
                   <span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"
                     id="Date">&nbsp;&nbsp;Jaipur
@@ -359,9 +515,6 @@
               </div>
       </li>
     
-      <!-- till here -->
-      
-
   </ul>
 
   <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#"
@@ -370,30 +523,30 @@
     uk-slideshow-item="next"></a>
 
   </div>
+  <a href="#" class="read-more">read more</a>
 
-  </div>
-  <div class="uk-section">
+  </div> -->
+  <div class="uk-section  ">
   <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade "
-    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:7%;">Success Stories
+    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;">Success Stories
     <hr class="uk-divider-small">
   </h3>
 
-
-  <div class="uk-position-relative uk-visible-toggle uk-light" id="story123"
-    uk-slideshow=" min-height: 300; max-height: 550; finite:true; animation: push " tabindex="-1">
+<!-- 
+   <div class="uk-position-relative uk-visible-toggle uk-light" id="story123"
+    uk-slideshow="finite:true; animation: push " tabindex="-1">
 
     <ul class="uk-slideshow-items ">
       <li>
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin " style="margin-top:2%"
           uk-grid>
-          <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
-          <div class="uk-card-media-left uk-cover-container" >
+         uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
+          <!-- <div class="uk-card-media-left uk-cover-container" >
             <img src="Images/default.jpeg" alt="" uk-cover>
             <canvas width="100" height="400"></canvas>
           </div>
           <div>
             <div class="uk-card-body uk-animation-slide-right ">
-              <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
               <h3 class="uk-card-title " id="head">Sucess title</h3>
               <p id="content">The default content is written Go and Post Your story With Us and got a part of a Alumni Website !!!!!
               </p>
@@ -402,7 +555,6 @@
 
               <br>
               <p class="font uk-align-right" style="margin-right:-19%;" id="batch">Batch</p>
-              <!-- <p class="font uk-align-right" style="margin-right:-9%;margin-top:12px;"id="course">Course</p> -->
 
             </div>
           </div>
@@ -412,7 +564,6 @@
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top"
          
           uk-grid>
-          <!--uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
           <div class="uk-card-media-left uk-cover-container">
             <img
               src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80 "
@@ -421,7 +572,6 @@
           </div>
           <div>
             <div class="uk-card-body uk-animation-slide-right ">
-              <!--uk-scrollspy="cls: uk-animation-slide-right; repeat: true"-->
               <h3 class="uk-card-title ">Media Left</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </div>
@@ -452,37 +602,276 @@
     uk-slideshow-item="next"></a>
 
   </div>
+  </div> -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+              <div class="container-fluid">
+                      <div class="row">
+                      <div class="card post-slide6" style="width: 18rem;" >
+                        <div class="post-img">
+                          <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+                      </div>
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="read-more">read more</a>
+                          </div>
+                        
+                      </div> <div class="card post-slide6" style="width: 18rem;" >
+                          <img src="Images/back.jpg" class="card-img-top" alt="...">
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">
+                              </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="read-more">read more</a>     
+                            </div>
+                      </div>
+                      <div class="card post-slide6" style="width: 18rem;" >
+                        <div class="post-img">
+                          <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+                      </div>
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="read-more">read more</a>
+                          </div>
+                        
+                      </div>
+                      </div>
+                      </div>
+                    
+        </div>  
+                     
+        <div class="carousel-item">
+              <div class="container-fluid">
+                      <div class="row">
+                      <div class="card post-slide6" style="width: 18rem;" >
+                        <div class="post-img">
+                          <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+                      </div>
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description" style="overflow:hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="read-more">read more</a>
+                          </div>
+                        
+                      </div> <div class="card post-slide6" style="width: 18rem;" >
+                          <img src="Images/back.jpg" class="card-img-top" alt="...">
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">
+                              </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description " style="overflow: hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                        
+                      </div>
+      
+                      
+                      <div class="card post-slide6" style="width: 18rem;" >
+                        <div class="post-img">
+                          <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+                      </div>
+                          <div class="card-body post-review">
+                              <span class="icons">
+                                  <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+      
+                              <p class="card-text post-description" style="overflow: hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="read-more">read more</a>
+                          </div>
+                        
+                      </div> 
+                      </div>
+                    </div>
+                      </div>
+                      
+                 
+
+      
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row">
+            <div class="card post-slide6" style="width: 18rem;" >
+              <div class="post-img">
+                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+            </div>
+                <div class="card-body post-review">
+                    <span class="icons">
+                        <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                    <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                    <p class="card-text post-description" style="overflow:hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="read-more">read more</a>
+                </div>
+              
+            </div> <div class="card post-slide6" style="width: 18rem;" >
+                <img src="Images/back.jpg" class="card-img-top" alt="...">
+                <div class="card-body post-review">
+                    <span class="icons">
+                        <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">
+                    </span>
+                    <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                    <p class="card-text post-description " style="overflow: hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              
+            </div>
+
+            
+            <div class="card post-slide6" style="width: 18rem;" >
+              <div class="post-img">
+                <img src="http://bestjquery.com/tutorial/news-slider/demo28/images/img-4.jpg" class="card-img-top" alt="..." >
+            </div>
+                <div class="card-body post-review">
+                    <span class="icons">
+                        <img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">                                            </span>
+                    <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+
+                    <p class="card-text post-description" style="overflow: hidden">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="read-more">read more</a>
+                </div>
+              
+            </div> 
+            </div>
+          </div>
+                      </div>
+          </div>
+      
+      <!-- <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol> -->
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span style="color:black !important;"class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only" style="color:black !important;">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span style="color:black !important;" class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span style="color:black !important;" class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
-<div class=" uk-section yu1">
-  <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1" style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
+
+  <div class="yu1" style="margin-top:70px;">
+      <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1 " style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
+        <hr class="uk-divider-small">
+      </h3>
+      
+    
+        <div class="uk-child-width-expand@s yu1" style="margin-top:70px;" id="dash">
+          <img src="Images/iop.png" 
+            style="margin-left:5px;" class="uy3" uk-img>
+          <div class="uk-align-right uk-width-1-2@s" style="margin-left:1px; margin-top:20px;">
+            <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
+            <span class="font">Batch : </span><span class="font" id="batch"
+              style="color:#757575;font-size:16px;">&nbsp;&nbsp;2017-2021
+            </span> <br>
+            <br><span class="font"> E-mail :</span><span class="font" id="e-mail" style="color:#757575;">
+              yashkalra088@gmail.com</span><br>
+            <br><span class="font"> Aur-ID : </span><span class="font" style="color:#757575;" id="AurID">
+              A20405217059</span><br>
+            <br>
+            <center><button class="uk-button uk-align-left uk-button-large er"
+                style="background-color:#153373;margin-top:4%"><a
+                  style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"
+                  href="update_info.html">Update Information </a></button></center>
+            <center><button type="button" class="uk-button uk-align-right uk-button-large  sty ty3"
+                uk-toggle="target: #my_id1" style="background-color:#153373;margin-top:4%;">Post Your Story </button>
+            </center>
+    
+          </div>
+        </div>
+    </div>
+<h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
+    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">News
     <hr class="uk-divider-small">
   </h3>
-  
 
-    <div class="uk-child-width-expand@s " class="yu1" id="dash">
-      <img src="Images/iop.png" 
-        style="margin-left:3%;" class="uy3" uk-img>
-      <div class="uk-align-right uk-width-1-2@s" style="margin-right:-3%">
-        <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
-        <span class="font">Batch : </span><span class="font" id="batch"
-          style="color:#757575;font-size:16px;">&nbsp;&nbsp;2017-2021
-        </span> <br>
-        <br><span class="font"> E-mail :</span><span class="font" id="e-mail" style="color:#757575;">
-          yashkalra088@gmail.com</span><br>
-        <br><span class="font"> Aur-ID : </span><span class="font" style="color:#757575;" id="AurID">
-          A20405217059</span><br>
-        <br>
-        <center><button class="uk-button uk-align-left uk-button-large er"
-            style="background-color:#FCD12A;margin-top:4%"><a
-              style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"
-              href="update_info.html">Update Information </a></button></center>
-        <center><button type="button" class="uk-button uk-align-right uk-button-large  sty ty3"
-            uk-toggle="target: #my_id1" style="background-color:#FCD12A;margin-top:4%;">Post Your Story </button>
-        </center>
-
-      </div>
-    </div>
+<div class="container">
+	<div class="">
+	   <div class="card  golge">
+            
+            <div class="card-body">
+              <div class="carousel vert slide" data-ride="carousel" data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <ul class="timeline">
+                      <li>
+                        <!--"_blank" tıklanan linkin yeni sekmede açılmasını sağlar.-->
+                        <a target="_blank" href="#">News Headline</a>
+                        <a href="#" class="float-right">09 Ocak, 2019</a>
+                        <p class="article">>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
+                      </li>
+                      <hr>
+                      <li>
+                        <a href="#">News Headline</a>
+                        <a href="#" class="float-right">4 Temmuz, 2018</a>
+                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..</p>
+                      </li>
+                       <hr>
+                      <li>
+                        <a href="#">News Headline</a>
+                        <a href="#" class="float-right">4 Temmuz, 2018</a>
+                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="carousel-item">
+                    <ul class="timeline">
+                      <li>
+                        <a href="#">News Headline</a>
+                        <a href="#" class="float-right">09 Ocak, 2019</a>
+                        <p class="article">>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
+                      </li>
+                      <hr>
+                      <li>
+                        <a href="#">News Headline</a>
+                        <a href="#" class="float-right">4 Temmuz, 2018</a>
+                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..</p>
+                      </li>
+                       <hr>
+                      <li>
+                        <a href="#">News Headline</a>
+                        <a href="#" class="float-right">4 Temmuz, 2018</a>
+                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                          gözükecek..</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
 </div>
+
+
 <div class="uk-section">
   <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:9%"> Messgae from VC sir
@@ -581,7 +970,7 @@
 
    
 var textWrapper = document.querySelector('.ml1 .letters');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  textWrapper.innerHTML = textWrapper.textContent.replace(/``S/g, "<span class='letter'>$&</span>");
 
   anime.timeline({ loop: true })
     .add({
@@ -622,15 +1011,23 @@ var textWrapper = document.querySelector('.ml1 .letters');
           else {
             var stry = document.getElementById('story').value;
             let title23 = document.getElementById('title').value;
-            db.ref('/Stories/' + node).set({
+         
+            if(data.val().photo == "Not Uploaded"){
+              db.ref('/Stories/' + node).set({
               Title: title23,
               Story: stry,
               Name: data.val().Name,
-              Course: data.val().Course,
-              Batch: data.val().Year
-
-
+              Photo: "Not Uploaded"
             });
+            }
+            else{
+              db.ref('/Stories/' + node).set({
+              Title: title23,
+              Story: stry,
+              Name: data.val().Name,
+              Photo: data.val().photo
+            });
+            }
           }
         });
       });

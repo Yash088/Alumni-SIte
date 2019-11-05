@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999% !important;
+    margin: 6px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100% !important;
+  }
+}
+
+.clearfix:after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+}
+</style>
+</head>
+<body>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Images/i2.jpg">
+      <img src="Images/i2.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+<div>
+
+</div>
+<script>
+function upload(){
+    console.log("Here");
+    var photo=document.getElementById('img') ;
+    var file=photo.files[0];
+    console.log(photo,photo.files); 
+    var storage = firebase.storage();
+    var storageRef = storage.ref('/images/'+file.name);
+   var uploadTask = storageRef.put(file); 
+   uploadTask.on('state_changed', function(snapshot){ 
+  }, function(error) {console.log(error); 
+  }, function() { 
+
+       // get the uploaded image url back 
+       uploadTask.snapshot.ref.getDownloadURL().then( 
+        function(downloadURL) { 
+
+       // You get your url from here 
+        console.log('File available at', downloadURL); 
+        var photo={
+            photo:downloadURL
+        }    ;
+        db.ref('/Gallery/').push(photo);
+
+    }); 
+  }); 
+}
+db.ref('/Gallery/').on('child_added',function(data){
+console.log(data.val);
+db.ref('/Gallery/').on('value')
+}) ;
+</script>
+</body>
+</html>
