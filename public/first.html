@@ -34,7 +34,199 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ntegrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <title>Alumni Site</title>
   <style>
-       
+ 
+
+
+    
+.content1{
+  margin-left:25%;
+  text-align:justify; 
+  margin-top:-20%
+}
+.isteColor{
+    color: #FCD12A;
+  }
+  .isteColor:hover{
+    color: #353A40;
+  }
+/*haber akışı list*/
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #153373;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+vertical carousel
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carouselitem-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+.h3{text-align:center;padding:1.5em 0em;text-transform:capitalize;font-size:1.5em;}
+
+
+.post-slide{
+    overflow: hidden;
+    margin-right: 15px;
+    background-color:#fff !important;
+}
+ .post-img1 {
+    float: left;
+    width:50%;
+    position: relative;
+    margin-right: 30px;
+}
+ .post-img1 img{
+    width: 100%;
+    height: auto;
+}
+.post-date{
+    background: #ec3c6a;
+    color:#fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 2% 3%;
+    width: 60px;
+    height: 80px;
+    text-align: center;
+    transition:all 0.50s ease;
+}
+ .date{
+    display: block;
+    font-size:20px;
+    font-weight: 700;
+}
+ .month{
+    display: block;
+    font-size:11px;
+    text-transform: uppercase;
+}
+.year{
+    display: block;
+    font-size:11px;
+    text-transform: uppercase;
+}
+.post-review1 {
+    padding: 5% 3% 1% 0;
+    border-top: 3px solid #38cfd8;
+}
+.post-slide:hover .post-review1{
+    border-top-color:#ec3c6a;
+}
+.post-slide .post-title1{
+    margin:0 0 10px 0;
+}
+.post-slide .post-title1 a{
+    font-size:14px;
+    color:#333;
+    text-transform:uppercase;
+}
+.post-slide .post-title1 a:hover{
+    text-decoration:none;
+    font-weight: bold;
+}
+ .post-bar{
+    padding:0;
+    list-style:none;
+    text-transform:uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+.post-slide .post-bar:after,
+.post-slide .post-bar:before{
+    border: 1px solid #38cfd8;
+    bottom: -10px;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 36%;
+    width: 25px;
+}
+.post-slide .post-bar:before{
+    border: 1px solid #ec3c6a;
+    right: 32%;
+}
+.post-slide .post-bar li{
+    color:#555;
+    font-size:10px;
+    margin-right:10px;
+    display:inline-block;
+}
+.post-slide .post-bar li a{
+    font-size: 13px;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#ec3c6a;
+}
+.post-slide .post-bar li a:hover{
+    color:#ec3c6a;
+}
+.post-slide .post-bar li i{
+    color:#777;
+    margin-right:5px;
+}
+.post-description1{
+    font-size:12px;
+    line-height:21px;
+    color:#444454;
+}
+
+@media only screen and (max-width: 990px) {
+     .post-img1 {
+        width:100%;
+    }
+     .post-review1{
+        width:100%;
+        border-bottom: 4px solid #ec3c6a;
+    }
+    .post-slide .post-bar:before{
+        left: 0;
+    }
+    .post-slide .post-bar:after{
+        left: 25px;
+    }
+}
 .post-slide6{
     margin: 0 10px;
     border-left: 8px solid #153373;
@@ -126,75 +318,6 @@
     filter: invert(100%);
 }
 
-
-    .adjust{
-      margin-left:5px;
-    }
-.content1{
-  margin-left:25%;
-  text-align:justify; 
-  margin-top:-20%
-}
-.isteColor{
-    color: #FCD12A;
-  }
-  .isteColor:hover{
-    color: #353A40;
-  }
-/*haber akışı list*/
-ul.timeline {
-  list-style-type: none;
-  position: relative;
-}
-ul.timeline:before {
-  content: ' ';
-  background: #d4d9df;
-  display: inline-block;
-  position: absolute;
-  left: 29px;
-  width: 2px;
-  height: 100%;
-  z-index: 400;
-}
-ul.timeline > li {
-  margin: 20px 0;
-  padding-left: 20px;
-}
-ul.timeline > li:before {
-
-  content: ' ';
-  background: white;
-  display: inline-block;
-  position: absolute;
-  border-radius: 50%;
-  border: 3px solid #153373;
-  left: 20px;
-  width: 20px;
-  height: 20px;
-  z-index: 400;
-}
-
-vertical carousel
-.vert .carousel-item-next.carousel-item-left,
-.vert .carousel-item-prev.carousel-item-right {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-
-.vert .carousel-item-next,
-.vert .active.carousel-item-right {
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100% 0);
-}
-
-.vert .carousel-item-prev,
-.vert .active.carouselitem-left {
--webkit-transform: translate3d(0,-100%, 0);
-        transform: translate3d(0,-100%, 0);
-}
-
- 
- 
   @media only screen and (max-width: 640px) {
     .adjust{
       margin-left:20px;
@@ -211,7 +334,7 @@ vertical carousel
   </style>
 </head>
 
-<body>
+<body onload="call_event(),call_news()">
   <div id="my_id1" uk-modal>
     <button class="uk-modal-close-default" type="button" uk-close></button>
 
@@ -365,7 +488,7 @@ vertical carousel
   <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
     <ul style="list-style-type: none;padding:5px;">
       
-      <li style="float:right; margin-right:15px;"><a style="text-decoration: none;">Search field</a></li>
+      <li style="float:right; margin-right:15px;"><a href="admin_login.html" style="text-decoration: none;">Admin Panel</a></li>
       <li style="float:left;"><a style="text-decoration: none;"><h4 style="color:white">Dash Board</h4></a></li>
       <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
 
@@ -394,10 +517,10 @@ vertical carousel
     </div>
     <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
       <ul class="uk-navbar-nav ">
-        <li><a style="color:#1a275b !important; font-size:12px;" href="#story123">Alumni Stories</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;" onclick="alert('Due to admin panel work is going');">Gallery</a></li>
+        <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
         <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
-        <li><a style="color:#1a275b !important;font-size:12px;" href="#">News</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
 
       </ul>
     </div>
@@ -423,28 +546,28 @@ vertical carousel
                 <div class="uk-offcanvas-bar">
     
                     <ul class="uk-nav uk-nav-default">
-                        <li class="uk-active" ><a href="#">About Us</a></li>
+                        <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-active"><a href="#">Login</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Message from VC</a></li>
+                        <li class="uk-active"><a href="#vc">Message from VC</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Student Testimonials</a></li>
+                        <li class="uk-active"><a href="admin_login.html">Admin Panel</a></li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-active"><a href="#">Feedback</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Contact Us</a></li>
+                        <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Job Openings</a></li>
+                        <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
+                        <li class="uk-nav-divider"></li> -->
+                        <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Photo Gallery</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Events invite notice</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">News Room</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-active"><a href="#">Group Members</a></li>
-                        <li class="uk-nav-divider"></li>
+                        <!-- <li class="uk-active"><a href="#">Events invite notice</a></li> -->
+                        <!-- <li class="uk-nav-divider"></li> -->
+                        <li class="uk-active"><a href="news1.html">News Room</a></li>
+                        <li class="uk-nav-divider"></li>  
+                        <!-- <li class="uk-active"><a href="#">Group Members</a></li>
+                        <li class="uk-nav-divider"></li> -->
                     </ul>
     
                 </div>
@@ -491,119 +614,208 @@ vertical carousel
     style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Upcoming Events
     <hr class="uk-divider-small">
   </h3>
-<!-- <div class="uk-section">
-    <div class="uk-position-relative uk-visible-toggle uk-light adjust23" 
-    uk-slideshow="  finite:true; animation: push " tabindex="-1">
+  <div id="carousel123" class="carousel slide" data-ride="carousel" style="margin-top:50px;">
+        
+      <div class="carousel-inner" id="setStory">
+          <div class="carousel-item active">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div id="news-slider" class="owl-carousel">
+                                  <div class="post-slide">
+                                      <div class="post-img1">
+                                          <a href="#">
+                                              <img src="http://bestjquery.com/tutorial/news-slider/demo19/images/img-1.jpg" alt="">
+                                              <div class="post-date">
+                                                  <span class="date">10</span>
+                                                  <span class="month"><b>jan</b></span>
+                                                  <span class="year">2019</span>
+                                              </div>
+                                          </a>
+                                      </div>
+                                      <div class="post-review1">
+                                          <h3 class="post-title1"><a href="#">Latest News Post</a></h3>
+                                          <ul class="post-bar">
+                                              <li><i class="fa fa-user"></i><a href="#">admin</a></li>
+                                              <li><i class="fa fa-comment"></i><a href="#">5</a></li>
+                                          </ul>
+                                          <p class="post-description1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus quasi quibusdam quos ratione sequi sit veritatis.</p>
+                                      </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                      </div>
 
-    <ul class="uk-slideshow-items " id="call_e">
-      <li>
-          <div uk-gird id="event">
-              <div class="uk-width-child-width-expand@s">
-                <img src="Images/iop.png" width="500px"
-                  id="url" style="margin-left:3%;" height="300px" uk-img>
-                <div class="uk-align-right uk-width-1-2@s  " >
-                  <h2 class="font ty1" style="font-size:30px;font-weight: 700; color:black" id="name4"><b>Event Name</b></h2>
-                  <span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"
-                    id="Date">&nbsp;&nbsp;Jaipur
-                  </span> <br>
-                  <br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;Jaipur
-                  </span>
-          
-          
-                  <p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">Event Description </p>
-                </div> 
-              </div>
-      </li>
-    
-  </ul>
+        </div>
+        <div class="carousel-item">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div id="news-slider" class="owl-carousel">
+                              <div class="post-slide">
+                                  <div class="post-img1">
+                                      <a href="#">
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo19/images/img-1.jpg" alt="">
+                                          <div class="post-date">
+                                              <span class="date">10</span>
+                                              <span class="month">jan</span>
+                                          </div>
+                                      </a>
+                                  </div>
+                                  <div class="post-review1">
+                                      <h3 class="post-title1"><a href="#">Latest News Post</a></h3>
+                                      <ul class="post-bar">
+                                          <li><i class="fa fa-user"></i><a href="#">admin</a></li>
+                                          <li><i class="fa fa-comment"></i><a href="#">5</a></li>
+                                      </ul>
+                                      <p class="post-description1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus quasi quibusdam quos ratione sequi sit veritatis.</p>
+                                  </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                                  </div>
+      </div>
+      <div class="carousel-item">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div id="news-slider" class="owl-carousel">
+                              <div class="post-slide">
+                                  <div class="post-img1">
+                                      <a href="#">
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo19/images/img-1.jpg" alt="">
+                                          <div class="post-date">
+                                              <span class="date">10</span>
+                                              <span class="month">jan</span>
+                                          </div>
+                                      </a>
+                                  </div>
+                                  <div class="post-review1">
+                                      <h3 class="post-title1"><a href="#">Latest News Post</a></h3>
+                                      <ul class="post-bar">
+                                          <li><i class="fa fa-user"></i><a href="#">admin</a></li>
+                                          <li><i class="fa fa-comment"></i><a href="#">5</a></li>
+                                      </ul>
+                                      <p class="post-description1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad magni, nesciunt obcaecati possimus quasi quibusdam quos ratione sequi sit veritatis.</p>
+                                  </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                                  </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel123" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel123" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      
+      </div>
 
-  <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#"
-    uk-slidenav-previous uk-slideshow-item="previous"></a>
-  <a class="uk-position-center-right uk-position-small uk-hidden-hover " href="#" style="color:black;" uk-slidenav-next
-    uk-slideshow-item="next"></a>
-
-  </div>
-  <a href="#" class="read-more">read more</a>
-
-  </div> -->
+ 
+    </div>
   <div class="uk-section  ">
+    <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
+    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">News
+    <hr class="uk-divider-small">
+  </h3>
+  
+  <div class="container">
+    <div class="">
+       <div class="card  golge">
+              
+              <div class="card-body">
+                <div class="carousel vert slide" data-ride="carousel" data-interval="2000">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <ul class="timeline">
+                        <li>
+                          <!--"_blank" tıklanan linkin yeni sekmede açılmasını sağlar.-->
+                          <a target="_blank" href="news.html">News Headline</a>
+                          <a href="#" class="float-right">09 Ocak, 2019</a>
+                          <p class="article">Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                            gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="#">News Headline</a>
+                          <a href="#" class="float-right">4 Temmuz, 2018</a>
+                          <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                            burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                            gözükecek..</p>
+                        </li>
+                         <hr>
+                        <li>
+                          <a href="#">News Headline</a>
+                          <a href="#" class="float-right">4 Temmuz, 2018</a>
+                          <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
+                            burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                            gözükecek..</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="carousel-item">
+                      <ul class="timeline" id="news">
+                        <li>
+                          <a href="#">News Headline</a>
+                          <a href="#" class="float-right">09 Ocak, 2019</a>
+                          <p class="article">Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
+                            gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
+                        </li>
+                        <hr>
+                        
+                         <hr>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="yu1" style="margin-top:70px;">
+            <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1 " style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
+              <hr class="uk-divider-small">
+            </h3>
+            
+          
+              <div class="uk-child-width-expand@s yu1" style="margin-top:70px;" id="dash">
+                <img src="Images/iop.png" 
+                  style="margin-left:5px;" class="uy3" uk-img>
+                <div class="uk-align-right uk-width-1-2@s" style="margin-left:1px; margin-top:20px;">
+                  <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
+                  <span class="font">Batch : </span><span class="font" id="batch"
+                    style="color:#757575;font-size:16px;">&nbsp;&nbsp;2017-2021
+                  </span> <br>
+                  <br><span class="font"> E-mail :</span><span class="font" id="e-mail" style="color:#757575;">
+                      yashkalra088@gmail.com</span><br>
+                      <br><span class="font"> Aur-ID : </span><span class="font" style="color:#757575;" id="AurID">
+                          A20405217059</span><br>
+                          <br>
+                          <center><button class="uk-button uk-align-left uk-button-large er"
+                      style="background-color:#153373;margin-top:4%"><a
+                      style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"
+                        href="update_info.html">Update Information </a></button></center>
+                        <center><button type="button" class="uk-button uk-align-right uk-button-large  sty ty3"
+                          uk-toggle="target: #my_id1" style="background-color:#153373;margin-top:4%;">Post Your Story </button>
+                  </center>
+                  
+                </div>
+              </div>
+          </div>
+
   <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left uk-animation-fade "
-    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;">Success Stories
+    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400; margin-top:70px;">Success Stories
     <hr class="uk-divider-small">
   </h3>
 
-<!-- 
-   <div class="uk-position-relative uk-visible-toggle uk-light" id="story123"
-    uk-slideshow="finite:true; animation: push " tabindex="-1">
-
-    <ul class="uk-slideshow-items ">
-      <li>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin " style="margin-top:2%"
-          uk-grid>
-         uk-scrollspy="cls: uk-animation-slide-top; repeat: true"-->
-          <!-- <div class="uk-card-media-left uk-cover-container" >
-            <img src="Images/default.jpeg" alt="" uk-cover>
-            <canvas width="100" height="400"></canvas>
-          </div>
-          <div>
-            <div class="uk-card-body uk-animation-slide-right ">
-              <h3 class="uk-card-title " id="head">Sucess title</h3>
-              <p id="content">The default content is written Go and Post Your story With Us and got a part of a Alumni Website !!!!!
-              </p>
-
-              <p class="font uk-align-right" style="margin-right:9%" id="name5">Yash</p><br>
-
-              <br>
-              <p class="font uk-align-right" style="margin-right:-19%;" id="batch">Batch</p>
-
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top"
-         
-          uk-grid>
-          <div class="uk-card-media-left uk-cover-container">
-            <img
-              src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80 "
-              alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-          </div>
-          <div>
-            <div class="uk-card-body uk-animation-slide-right ">
-              <h3 class="uk-card-title ">Media Left</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-margin-medium-top"
-          uk-grid ">
-                <div class=" uk-flex-last@s uk-card-media-right uk-cover-container">
-          <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
-          <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
-          <div class="uk-card-body uk-animation-slide-left">
-            <h3 class="uk-card-title">Media Right</h3>
-            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-            </p>
-          </div>
-        </div>
-  </div>
-  </li>
-  </ul>
-
-  <a class="uk-position-center-left uk-position-small uk-hidden-hover " style="color:black;" href="#"
-    uk-slidenav-previous uk-slideshow-item="previous"></a>
-  <a class="uk-position-center-right uk-position-small uk-hidden-hover " href="#" style="color:black;" uk-slidenav-next
-    uk-slideshow-item="next"></a>
-
-  </div>
-  </div> -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000" style="margin-top:50px;"> 
 
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -769,168 +981,49 @@ vertical carousel
     </div>
   </div>
 
-  <div class="yu1" style="margin-top:70px;">
-      <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font yu1 " style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">Alumni Info
-        <hr class="uk-divider-small">
-      </h3>
-      
-    
-        <div class="uk-child-width-expand@s yu1" style="margin-top:70px;" id="dash">
-          <img src="Images/iop.png" 
-            style="margin-left:5px;" class="uy3" uk-img>
-          <div class="uk-align-right uk-width-1-2@s" style="margin-left:1px; margin-top:20px;">
-            <h2 class="font " style="font-size:30px;font-weight: 700" id="name3"><b>Yash Kalra</b></h2>
-            <span class="font">Batch : </span><span class="font" id="batch"
-              style="color:#757575;font-size:16px;">&nbsp;&nbsp;2017-2021
-            </span> <br>
-            <br><span class="font"> E-mail :</span><span class="font" id="e-mail" style="color:#757575;">
-              yashkalra088@gmail.com</span><br>
-            <br><span class="font"> Aur-ID : </span><span class="font" style="color:#757575;" id="AurID">
-              A20405217059</span><br>
-            <br>
-            <center><button class="uk-button uk-align-left uk-button-large er"
-                style="background-color:#153373;margin-top:4%"><a
-                  style="text-decoration: none;color:rgb(255, 255, 255);font-weight: 700;font-family: 'Montserrat';font-size: 15px;letter-spacing:1px;"
-                  href="update_info.html">Update Information </a></button></center>
-            <center><button type="button" class="uk-button uk-align-right uk-button-large  sty ty3"
-                uk-toggle="target: #my_id1" style="background-color:#153373;margin-top:4%;">Post Your Story </button>
-            </center>
-    
-          </div>
-        </div>
-    </div>
-<h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
-    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400">News
-    <hr class="uk-divider-small">
-  </h3>
-
-<div class="container">
-	<div class="">
-	   <div class="card  golge">
-            
-            <div class="card-body">
-              <div class="carousel vert slide" data-ride="carousel" data-interval="2000">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <ul class="timeline">
-                      <li>
-                        <!--"_blank" tıklanan linkin yeni sekmede açılmasını sağlar.-->
-                        <a target="_blank" href="#">News Headline</a>
-                        <a href="#" class="float-right">09 Ocak, 2019</a>
-                        <p class="article">>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
-                      </li>
-                      <hr>
-                      <li>
-                        <a href="#">News Headline</a>
-                        <a href="#" class="float-right">4 Temmuz, 2018</a>
-                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
-                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..</p>
-                      </li>
-                       <hr>
-                      <li>
-                        <a href="#">News Headline</a>
-                        <a href="#" class="float-right">4 Temmuz, 2018</a>
-                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
-                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..</p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="carousel-item">
-                    <ul class="timeline">
-                      <li>
-                        <a href="#">News Headline</a>
-                        <a href="#" class="float-right">09 Ocak, 2019</a>
-                        <p class="article">>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..</p>
-                      </li>
-                      <hr>
-                      <li>
-                        <a href="#">News Headline</a>
-                        <a href="#" class="float-right">4 Temmuz, 2018</a>
-                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
-                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..</p>
-                      </li>
-                       <hr>
-                      <li>
-                        <a href="#">News Headline</a>
-                        <a href="#" class="float-right">4 Temmuz, 2018</a>
-                        <p>Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler
-                          burada gözükecek..Haberler burada gözükecek..Haberler burada gözükecek..Haberler burada
-                          gözükecek..</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-	</div>
-</div>
 
 
 <div class="uk-section">
   <h3 class="uk-h3 uk-text-secondary uk-margin-medium-left font"
-    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:9%"> Messgae from VC sir
+    style="color:#484848; font-family:'Montserrat';font-size:24px;font-weight: 400;margin-top:10px"> Messgae from VC sir
     <hr class="uk-divider-small">
   </h3>
-  <div uk-gird id="vc">
+  <div class="container">
+    <div class="row">
+  
 
-    <div class="uk-width-1-1">
+    <div  class="col-md-6" style="margin-top:50px">
       <img src="https://www.amity.edu/jaipur/images/arun-patil.jpg" width="300px" 
-        class="adjust" height="100px " uk-img>
-      <div class="uk-align-right  content1">
+         height="100px " uk-img>
+        
+        </div>
+      <div class="col-md-6   post-description" style="margin-top:8%">
         Professor (Dr) Arun Patil is currently Vice-Chancellor and President of Amity University Rajasthan, India. Prior to this Professor Patil was Pro Vice-Chancellor and Pro-President at Amity University Rajasthan. Before moving to India, Professor Patil was Director of Postgraduate Coursework Studies and Director of Deakin Engineering Education Research (DEER) in the School of Engineering, Deakin University, Australia.
       </div>
-    </div>
   </div>
   </div>
-</div>
-  <div class="uk-section uk-section-secondary uk-light uk-margin-large-top">
-    <div uk-grid>
-      <div class="uk-align-left uk-margin-top">
-        <img class="uk-margin-left" src="https://amity.edu/images/logo.png" height="120px" width="250px">
-
-      </div>
-      <div>
-        <center>
-          <h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">
-            UNIVERSITY</h6>
-        </center>
-        <ul style="list-style-type: none; " class="uk-margin-top">
-
-          <li
-            style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-            class="uk-margin-left">Alumni</li>
-          <li
-            style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-            class="uk-margin-left">Gallery</li>
-          <li
-            style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-            class="uk-margin-left">Events</li>
-          <li
-            style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-            class="uk-margin-left">Stories</li>
-          <li
-            style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-            class="uk-margin-left">Dashboard</li>
-        </ul>
-      </div>
-
-      <div class="uk-align-right uk-margin-top" data-aos="zoom-in">
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
-        <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
-      </div>
-    </div>
   </div>
 
+
+  
+  <div class="uk-section uk-section-secondary uk-light " >
+      <div uk-grid>
+          <div class="uk-align-left uk-margin-top">
+             <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+
+          </div>
+         <div >
+        <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+          <ul style="list-style-type: none; " class="uk-margin-top ">
+              
+              <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html" style="text-decoration: none;">Alumni</a></li>
+              <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a href="gallery.html"style="text-decoration: none;">Gallery</a></li>
+              <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html"style="text-decoration: none;">Events</a></li>
+              <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" ><a href="Story.html" style="text-decoration: none;">Stories</a></li>
+              <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="news1.html" style="text-decoration: none;">About Us</a></li>
+              <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="aboutus.html"style="text-decoration: none;">About Us</a></li>
+          </ul>
+          </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>

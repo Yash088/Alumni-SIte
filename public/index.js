@@ -1,10 +1,10 @@
-call_event();
+
 if(localStorage.getItem('node')){
     var modal = UIkit.modal("#my_id");
     modal.hide();
     call_data();
     
-    call_story();
+    // call_story();
    
 
 }
@@ -256,9 +256,7 @@ uploadTask.on('state_changed', function(snapshot){
     modal.hide();
     call_data();
 }
-function update() {
-    
-}
+
 function call_data(){
     var db=firebase.database();
     var node=localStorage.getItem("node");
@@ -278,56 +276,124 @@ function call_data(){
 }
 function call_event(){
     var db=firebase.database();
-    db.ref('/Events/').on('child_added',function(data){
+    console.log("here");
+    db.ref('/Events/').on('child_added',function(data1){
+    db.ref('/Events/'+data1.key).on('value',function(data){
+        console.log("here");
+        var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
         var name=data.val().Name;
         var day=data.val().date;
+        let day1=day.split("/");
+        let month1=day1[0];
+        let day3=day1[1];
+        let year=day1[2]
         var dec=data.val().description;
         var url=data.val().photo;
         var locate=data.val().location;
-        console.log(name);
-        console.log(day);
-        console.log(dec);
-        console.log(url);
-        console.log(locate);
-        document.getElementById('call_e').innerHTML= document.getElementById('call_e').innerHTML +  '<li>'+
-        '<div uk-gird id="event">'+
-        '<div class="uk-width-child-width-expand@s">'+
-          '<img src="'+url+'" width="500px"'+
-           'id="url" style="margin-left:3%;" height="300px" uk-img>'+
-          '<div class="uk-align-right uk-width-1-2@s ty " >'+
-            '<h2 class="font ty1" style="font-size:30px;font-weight: 700;color:black" id="name4"><b>'+name+'</b></h2>'+
-            '<span uk-icon="location"> </span><span class="font" style="color:#757575;font-size:16px;"'+
-             ' id="Date">&nbsp;&nbsp;'+locate+
-            '</span> <br>'+
-            '<br><span uk-icon="calendar"> </span><span class="font " style="color:#757575;" id="locate"> &nbsp;&nbsp;'+day+
-            '</span>'+
-            '<p class="font ty1" style="text-align: justify; font-size:16px;" id="descript">'+dec+
-            ' </p>'+
-          '</div>'+ 
-        '</div>'+
-        '</li>';
+console.log(locate,name);
+        document.getElementById('setStory').innerHTML= document.getElementById('setStory').innerHTML +  
+       ' <div class="carousel-item">'+
+        '<div class="container">'+
+            '<div class="row">'+
+                '<div class="col-md-12">'+
+                    '<div id="news-slider" class="owl-carousel">'+
+                        '<div class="post-slide">'+
+                            '<div class="post-img1">'+
+                                '<a href="#">'+
+                                    '<img src="'+url+'" alt="">'+
+                                    '<div class="post-date">'+
+                                        '<span class="date">'+day3+'</span>'+
+                                        '<span class="month"><b>'+mS[month1-1]+'</b></span>'+
+                                        '<span class="year">'+year+'</span>'+
+                                    '</div>'+
+                                '</a>'+
+                            '</div>'+
+                            '<div class="post-review1">'+
+                                '<h3 class="post-title1"><a href="#">'+name+'</a></h3>'+
+                                '<ul class="post-bar">'+
+                                    '<li><i class=""></i><a href="#">'+locate+'</a></li>'+
+                                '</ul>'+
+                                '<p class="post-description1">'+dec+'</p>'+
+                            '</div>'+
+                        '</div>'+
+                        '</div>'+
+                        '</div>'+
+                        '</div>'+
+                         '</div>'+
+'</div>';
+    });
     });
 }
-function call_story(){
-    
-    var node=localStorage.getItem("node");
-    var db= firebase.database();
-  db.ref('/alumni_info/'+node+'/').once('value',function(data){
-  
-    db.ref('/Stories/').once('value',function(data1){
-    
-              if(data1.hasChild(node)){
-                db.ref('/Stories/'+node).once('value',function(data2){
-                      
-                      document.getElementById('batch').innerHTML='<span class="font">Batch : <span>'+data2.val().Batch;
-                    
-                      document.getElementById('name5').innerHTML=data2.val().Name;
-                      document.getElementById('content').innerHTML=data2.val().Story;
-                      document.getElementById('head').innerHTML=data2.val().Title;
-                  });
-              }
-  });
-  });
+//Pending Due to three Division Division
+// function call_story(){ 
+//     var db= firebase.database();
+//      db.ref('/Stories/').on('child_added',function(data){
+//        db.ref('/Stories/'+data.key).on('value',function(data1){
+//     if(data1.val().Photo !=="Not Uploaded"){   
+//            console.log("here");
+//                                console.log(data1.val().Photo);       
+//                                document.getElementById('Story').innerHTML= document.getElementById('Story').innerHTML+
+//                 '<div class="card post-slide6" style="width: 18rem;" >'+
+//                                    '<div class="post-img">'+
+//                                    '<img src="'+data1.val().Photo+'" class="card-img-top" alt="...">'+
+//                                    '</div>'+
+//                                    '<div class="card-body post-review">'+
+//                                       ' <span class="icons">'+
+//                                            '<img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">'+
+//                                        '</span>'+
+//                                        '<h3 class="post-title"><a href="#">'+data1.val().Name+'</a></h3>'+
+               
+//                                       ' <p class="card-text post-description" >'+data1.val().Story+'</p>'+
+                                      
+
+//                                    '</div>'+
+                                 
+//                                '</div>';
+//                                       }
+//                                       else{
+//                                console.log("There");            
+//                 document.getElementById('Story').innerHTML= document.getElementById('Story').innerHTML+
+//                 '<div class="card post-slide6" style="width: 18rem;" >'+
+//                                    '<div class="post-img">'+
+//                                    '<img src="Images/back.jpg" class="card-img-top" alt="...">'+
+//                                    '</div>'+
+//                                    '<div class="card-body post-review">'+
+//                                       ' <span class="icons">'+
+//                                            '<img src="Images/logo.jpeg" style="margin-top:1.9px" alt="">'+
+//                                        '</span>'+
+//                                        '<h3 class="post-title"><a href="#">'+data1.val().Name+'</a></h3>'+
+               
+//                                       ' <p class="card-text post-description" >'+data1.val().Story+'</p>'+
+                                      
+
+//                                    '</div>'+
+                                 
+//                                '</div>';
+//                                       }
+                                      
+//                            });
+//      });
+//    }
+function call_news(){
+
+    db.ref('/News/').on('child_added',function(data1){
+        db.ref('/News/'+data1.key).on('value',function(data){
+            var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        var name=data.val().Name;
+        var day=data.val().date;
+        let day1=day.split("/");
+        let month1=day1[0];
+        let day3=day1[1];
+        let year=day1[2]
+        var dec=data.val().description;
+            document.getElementById('news').innerHTML=document.getElementById('news').innerHTML+ '<li>'+
+            '<a  href="news.html">'+name+'</a>'+
+            '<a href="news.html" class="float-right">'+day3+mS[month1-1]+year+'</a>'+
+            '<p class="article">'+dec+'</p>'+
+          '</li>';
+        });
+    });
 }
 function search(){
     var find=document.getElementById('search').value;

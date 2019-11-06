@@ -680,9 +680,13 @@ main.l-main .page-title {
       Name: name,
       date: date1,
       description: lines,
+      location:locate,
       photo: "https://images.jdmagicbox.com/comp/jaipur/99/0141p141stdf015299/catalogue/amity-university-gopal-bari-jaipur-fashion-designing-institutes-8azn92.jpg"
-    });
-    location.reload();
+    }).then(function(){
+      location.reload()
+    })
+    console.log("updated")
+    // location.reload();
   }
   
 
