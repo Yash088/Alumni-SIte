@@ -1,235 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<style>
-div.gallery {
-  border: 1px solid #ccc;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-.content{
-             margin-top:80px !important;
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
+    rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <style>
+    div.gallery {
+      border: 1px solid #ccc;
     }
-    .leaders{
-      margin-left:230px;
+
+    div.gallery:hover {
+      border: 1px solid #777;
     }
-    .show{
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    .small_left {
+      margin-left: 18px;
+    }
+
+    .content {
+      margin-top: 80px !important;
+    }
+
+    .leaders {
+      margin-left: 230px;
+    }
+
+    .show {
       display: none !important;
     }
+
     @media only screen and (max-width: 1024px) {
-        .content{
-            margin-top:80px !important;
-        }
-        .hide{
-          display:none !important;
-        }
-        .show{
-          display:flex !important;
-        }
+      .content {
+        margin-top: 80px !important;
+      }
+
+      .hide {
+        display: none !important;
+      }
+
+      .show {
+        display: flex !important;
+      }
+
     }
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999% !important;
-    margin: 6px 0 !important;
-  }
-}
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100% !important;
-  }
-}
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999% !important;
+        margin: 6px 0 !important;
+      }
 
-.clearfix:after {
-  content: "" !important;
-  display: table !important;
-  clear: both !important;
-}
-</style>
+      .vsmall_left {
+        margin-left: 8px;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100% !important;
+      }
+    }
+
+    .clearfix:after {
+      content: "" !important;
+      display: table !important;
+      clear: both !important;
+    }
+  </style>
 </head>
- <body onload="load()">
-    <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
-        <ul style="list-style-type: none;padding:5px;">
+
+<body onload="load()">
+  <div class="uk-visible@m" style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+    <ul style="list-style-type: none;padding:5px;">
+
+      <li style="float:right; margin-right:15px;"><a style="text-decoration: none;color:white;"
+          href="admin_login.html">Admin Panel</a></li>
+      <li style="float:left;"><a style="text-decoration: none;" href="Story.html">
+          <h4 style="color:white">Stroies</h4>
+        </a></li>
+      <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+
+
+    </ul>
+
+  </div>
+
+  <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+    <div class=" uk-navbar-left " style="overflow:hidden">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="Story.html">Alumni Stories</a></li>
+        <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Message From VC</a></li> -->
+        <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Dashboard</a></li>
+        <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+
+      </ul>
+    </div>
+    <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+      <li style="list-style-type: none;">
+        <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+      </li>
+
+    </div>
+    <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
+      <ul class="uk-navbar-nav ">
+        <!-- <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li> -->
+        <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
+        <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
+
+      </ul>
+    </div>
+
+
+  </nav>
+  <div class=" uk-hidden@m" style="background-color:#153373;" uk-navbar>
+    <div>
+      <img src="Images/logo.jpeg" height="40px" width="40px" class="uk-box-shadow-large">
+    </div>
+    <div class="uk-navbar-right">
+
+
+      <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+        style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+
+    </div>
+  </div>
+
+
+
+  <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+      <ul class="uk-nav uk-nav-default">
+        <li class="uk-active"><a href="aboutus.html">About Us</a></li>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="#">Login</a></li>
+        <li class="uk-nav-divider"></li>
+        <!-- <li class="uk-active"><a href="first.html">Message from VC</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+        <li class="uk-active"><a href="admin_login.html">Admin Login</a></li>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="#">Feedback</a></li>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
+        <li class="uk-nav-divider"></li>
+        <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+        <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="first.html">Events </a></li>
+        <li class="uk-nav-divider"></li>
+        <li class="uk-active"><a href="news1.html">News Room</a></li>
+        <li class="uk-nav-divider"></li>
+        <!-- <li class="uk-active"><a href="#">Group Members</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+      </ul>
+
+    </div>
+
+  </div>
+  <div style="margin-top:30px;"id="photo123">
+
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Images/i2.jpg">
+            <img src="Images/i2.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+        </div>
+      </div>
+      
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Images/i2.jpg">
+            <img src="Images/i2.jpg" alt="Forest" width="600" height="400">
+          </a>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Images/i2.jpg">
+            <img src="Images/i2.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Images/i2.jpg">
+            <img src="Images/i2.jpg" alt="Mountains" width="600" height="400">
+          </a>
           
-          <li style="float:right; margin-right:15px;"><a style="text-decoration: none;color:white;" href="admin_login.html">Admin Panel</a></li>
-          <li style="float:left;"><a style="text-decoration: none;" href="Story.html"><h4 style="color:white">Stroies</h4></a></li>
-          <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
-    
-    
-        </ul>
-    
-      </div>
-    
-      <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
-        <div class=" uk-navbar-left " style="overflow:hidden">
-          <ul class="uk-navbar-nav">
-            <li>
-              <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
-            <li><a style="color:#1a275b !important;font-size:12px;" href="Story.html">Alumni Stories</a></li>
-            <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Message From VC</a></li> -->
-            <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Dashboard</a></li>
-            <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
-    
-          </ul>
-        </div>
-        <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
-          <li style="list-style-type: none;">
-            <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
-          </li>
-    
-        </div>
-        <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
-          <ul class="uk-navbar-nav ">
-            <!-- <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li> -->
-            <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
-            <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
-            <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
-    
-          </ul>
-        </div>
-    
-    
-      </nav>
-      <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
-        <div>
-            <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
-        </div>
-        <div class="uk-navbar-right">
-             
-    
-                <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-                             style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
-                
         </div>
       </div>
-    
-    
-                 
-       <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-                    <div class="uk-offcanvas-bar">
-        
-                        <ul class="uk-nav uk-nav-default">
-                            <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li class="uk-active"><a href="#">Login</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <!-- <li class="uk-active"><a href="first.html">Message from VC</a></li>
-                            <li class="uk-nav-divider"></li> -->
-                             <li class="uk-active"><a href="admin_login.html">Admin Login</a></li>
-                            <li class="uk-nav-divider"></li> 
-                            <li class="uk-active"><a href="#">Feedback</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
-                            <li class="uk-nav-divider"></li> -->
-                            <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li class="uk-active"><a href="first.html">Events </a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li class="uk-active"><a href="news1.html">News Room</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <!-- <li class="uk-active"><a href="#">Group Members</a></li>
-                            <li class="uk-nav-divider"></li> -->
-                        </ul>
-        
-                    </div>
-                
-                  </div>
-<div style="margin-top:30px;"id="photo123">
+      
+      
+    </div>
+    <div class="clearfix"></div>
 
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="Images/i2.jpg">
-      <img src="Images/i2.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-  </div>
-</div>
-
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="Images/i2.jpg">
-      <img src="Images/i2.jpg" alt="Forest" width="600" height="400">
-    </a>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="Images/i2.jpg">
-      <img src="Images/i2.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="Images/i2.jpg">
-      <img src="Images/i2.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    
-  </div>
-</div>
-
-<div class="clearfix"></div>
-<div>
-
+      <div class="uk-section uk-section-secondary uk-light uk-margin-large-top" >
+          <div uk-grid>
+              <div class="uk-align-left uk-margin-top">
+                 <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+  
+              </div>
+             <div >
+            <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+              <ul style="list-style-type: none; " class="uk-margin-top ">
+                  
+                  <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html" style="text-decoration: none;">Alumni</a></li>
+                  <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a href="gallery.html"style="text-decoration: none;">Gallery</a></li>
+                  <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="news.html"style="text-decoration: none;">News</a></li>
+                  <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" ><a href="Story.html" style="text-decoration: none;">Stories</a></li>
+                  <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="aboutus.html"style="text-decoration: none;">About Us</a></li>
+              </ul>
+              </div>
 </div>
 </div>
-
-<div class="uk-section uk-section-secondary uk-light " >
-    <div uk-grid>
-        <div class="uk-align-left uk-margin-top">
-           <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
-
-        </div>
-       <div >
-      <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
-        <ul style="list-style-type: none; " class="uk-margin-top ">
-            
-            <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html" style="text-decoration: none;">Alumni</a></li>
-            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a href="gallery.html"style="text-decoration: none;">Gallery</a></li>
-            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html"style="text-decoration: none;">Events</a></li>
-            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" ><a href="Story.html" style="text-decoration: none;">Stories</a></li>
-            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="news1.html" style="text-decoration: none;">About Us</a></li>
-            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="aboutus.html"style="text-decoration: none;">About Us</a></li>
-        </ul>
-        </div>
-<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
@@ -270,5 +308,7 @@ function load(){
   });
 }
 </script>
+
 </body>
+
 </html>

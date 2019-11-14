@@ -376,7 +376,7 @@ console.log(locate,name);
 //      });
 //    }
 function call_news(){
-
+var db=firebase.database();
     db.ref('/News/').on('child_added',function(data1){
         db.ref('/News/'+data1.key).on('value',function(data){
             var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -385,18 +385,27 @@ function call_news(){
         let day1=day.split("/");
         let month1=day1[0];
         let day3=day1[1];
-        let year=day1[2]
+        let year=day1[2];
         var dec=data.val().description;
+        var dec1=" ";
+        for(let i=0;i<=210;i++){
+            dec1=dec1+dec[i];
+            
+        }
+        
             document.getElementById('news').innerHTML=document.getElementById('news').innerHTML+ '<li>'+
             '<a  href="news.html">'+name+'</a>'+
-            '<a href="news.html" class="float-right">'+day3+mS[month1-1]+year+'</a>'+
-            '<p class="article">'+dec+'</p>'+
-          '</li>';
+            '<a href="news.html" class="float-right">'+day3+" "+mS[month1-1]+" "+year+'</a>'+
+            '<p class="article" style="overflow :hidden ;">'+ dec1 +'</p>'+
+        
+            '</li> <hr>';
+ 
         });
     });
 }
 function search(){
     var find=document.getElementById('search').value;
+
     var db= firebase.database();
     db.ref('/alumni_info').on('value',function(snapshot){
        if(snapshot.hasChild(find)){

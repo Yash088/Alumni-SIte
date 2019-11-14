@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
+<link rel="stylesheet" href="style.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+    body{background-color:#f1f1f2 !important;}
+.h3{text-align:center;padding:1.5em 0em;text-transform:capitalize;font-size:1.5em;}
+
+.post-slide14{
+    border-width: 1px 1px 5px;
+    border-style: solid;
+    border-color: #e67e22 #f0f0f0 #f0f0f0;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+ .post-slide14 .post-category{
+    border-bottom:1px solid whitesmoke;
+    margin:0;
+    text-align:center;
+    padding:10px;
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:capitalize;
+} 
+ .post-slide14 .post-category > a{
+    text-transform: uppercase;
+    color:#e67e22;
+    transition: all 0.2s ease 0s;
+}
+.post-slide14 .post-category > a:hover{
+    color: #373a3f;
+} 
+.post-slide14 .post-review{
+    overflow: hidden;
+    padding:10px;
+}
+.post-slide14 .post-bar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e67e22;
+    float: left;
+    line-height: 34px;
+    text-align: center;
+    margin-right: 10px;
+}
+.small_left{
+                margin-left:18px;
+              }
+              @media only screen and (max-width: 640px) {
+                .vsmall_left{
+                margin-left:8px;
+              }
+              }
+.post-slide14 .post-bar > .month{
+    display: block;
+    color:#fff;
+    font-size:10px;
+    text-transform: capitalize;
+}
+.post-slide14 .post-bar > .date{
+    color: #fff;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 12px;
+}
+.post-slide14 .post-title{
+    line-height: 20px;
+    margin: 10px 0 0 0;
+}
+.post-slide14 .post-title > a{
+    font-size:17px;
+    text-transform:uppercase;
+    font-weight:bold;
+    line-height:10px;
+    color:#333;
+    transition: all 0.2s ease 0s;
+}
+.post-slide14 .post-title > a:hover{
+    color:#e67e22;
+}
+.post-slide14 .post-img{
+    filter: grayscale(0);
+    transition:all 0.3s ease 0s;
+}
+.post-slide14 .post-img > img{
+    width: 60%;
+    height: auto;
+}
+/* .post-slide14:hover .post-img{
+    filter: grayscale(1);
+} */
+.post-slide14 .post-description{
+    color: #555;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 20px 35px;
+}
+
+.post-slide14{
+    border-width: 1px 1px 5px;
+    border-style: solid;
+    border-color: #e67e22 #f0f0f0 #f0f0f0;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+.post-slide14 .post-category{
+    border-bottom:1px solid whitesmoke;
+    margin:0;
+    text-align:center;
+    padding:10px;
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:capitalize;
+}
+.post-slide14 .post-category > a{
+    text-transform: uppercase;
+    color:#e67e22;
+    transition: all 0.2s ease 0s;
+}
+.post-slide14 .post-category > a:hover{
+    color: #373a3f;
+}
+.post-slide14 .post-review{
+    overflow: hidden;
+    padding:10px;
+}
+.post-slide14 .post-bar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e67e22;
+    float: left;
+    line-height: 34px;
+    text-align: center;
+    margin-right: 10px;
+}
+.post-slide14 .post-bar > .month{
+    display: block;
+    color:#fff;
+    font-size:10px;
+    text-transform: capitalize;
+}
+.post-slide14 .post-bar > .date{
+    color: #fff;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 12px;
+}
+.post-slide14 .post-title{
+    line-height: 20px;
+    margin: 10px 0 0 0;
+}
+.post-slide14 .post-title > a{
+    font-size:17px;
+    text-transform:uppercase;
+    font-weight:bold;
+    line-height:10px;
+    color:#333;
+    transition: all 0.2s ease 0s;
+}
+.post-slide14 .post-title > a:hover{
+    color:#e67e22;
+}
+.post-slide14 .post-img{
+    filter: grayscale(0);
+    transition:all 0.3s ease 0s;
+}
+.post-slide14 .post-img > img{
+    width: 100%;
+    height: auto;
+}
+.post-slide14:hover .post-img{
+    filter: grayscale(1);
+}
+.post-slide14 .post-description{
+    color: #555;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 20px 35px;
+}
+
+
+.small_left{
+                margin-left:18px;
+              }
+              @media only screen and (max-width: 640px) {
+                .vsmall_left{
+                margin-left:8px;
+              }
+              }
+</style>
+</head>
+<body onload="call_news()">
+    <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+        <ul style="list-style-type: none;padding:5px;">
+          
+          <li style="float:right; margin-right:15px;"><a style="text-decoration: none;color:white;" href="admin_login.html">Admin Panel</a></li>
+          <li style="float:left;"><a style="text-decoration: none;" href="Story.html"><h4 style="color:white">Stroies</h4></a></li>
+          <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
+    
+    
+        </ul>
+    
+      </div>
+    
+      <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+        <div class=" uk-navbar-left " style="overflow:hidden">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+            <li><a style="color:#1a275b !important;font-size:12px;" href="Story.html">Alumni Stories</a></li>
+            <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Message From VC</a></li> -->
+            <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Dashboard</a></li>
+            <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+    
+          </ul>
+        </div>
+        <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+          <li style="list-style-type: none;">
+            <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+          </li>
+    
+        </div>
+        <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
+          <ul class="uk-navbar-nav ">
+            <!-- <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li> -->
+            <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
+            <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
+            <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
+    
+          </ul>
+        </div>
+    
+    
+      </nav>
+      <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+        <div>
+            <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+        </div>
+        <div class="uk-navbar-right">
+             
+    
+                <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                             style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                
+        </div>
+      </div>
+    
+    
+                 
+       <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                    <div class="uk-offcanvas-bar">
+        
+                        <ul class="uk-nav uk-nav-default">
+                            <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active"><a href="#">Login</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <!-- <li class="uk-active"><a href="first.html">Message from VC</a></li>
+                            <li class="uk-nav-divider"></li> -->
+                             <li class="uk-active"><a href="admin_login.html">Admin Login</a></li>
+                            <li class="uk-nav-divider"></li> 
+                            <li class="uk-active"><a href="#">Feedback</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
+                            <li class="uk-nav-divider"></li> -->
+                            <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active"><a href="first.html">Events </a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active"><a href="news1.html">News Room</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <!-- <li class="uk-active"><a href="#">Group Members</a></li>
+                            <li class="uk-nav-divider"></li> -->
+                        </ul>
+        
+                    </div>
+                
+                  </div>
+                  <div class="container" style="margin-top:100px;">
+                      <div class="row" id="news">
+                          <div class="col-md-4">
+                              <div id="news-slider14" class="owl-carousel">
+                                  <div class="post-slide14">
+                                          <h3 class="post-category"><a href="#">Amity University Rajasthan</a></h3>
+                                      <div class="post-review">
+                                          <div class="post-bar">
+                                              <span class="month">nov</span>
+                                              <span class="date">5</span>
+                                          </div>
+                                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                      </div>
+                                      <div class="post-img">
+                                          <center>
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
+                                          </center>
+                                      </div>
+                                      <p class="post-description" style="text-align:left;margin-left:0px ;">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div> 
+                          <div class="col-md-4">
+                              <div id="news-slider14" class="owl-carousel">
+                                  <div class="post-slide14">
+                                          <h3 class="post-category"><a href="#">Amity University Rajasthan</a></h3>
+                                      <div class="post-review">
+                                          <div class="post-bar">
+                                              <span class="month">nov</span>
+                                              <span class="date">5</span>
+                                          </div>
+                                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                      </div>
+                                      <div class="post-img">
+                                          <center>
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
+                                          </center>
+                                      </div>
+                                      <p class="post-description" style="text-align:left;margin-left:0px ;">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div> 
+                          <div class="col-md-4">
+                              <div id="news-slider14" class="owl-carousel">
+                                  <div class="post-slide14">
+                                          <h3 class="post-category"><a href="#">Amity University Rajasthan</a></h3>
+                                      <div class="post-review">
+                                          <div class="post-bar">
+                                              <span class="month">nov</span>
+                                              <span class="date">5</span>
+                                          </div>
+                                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                      </div>
+                                      <div class="post-img">
+                                          <center>
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
+                                          </center>
+                                      </div>
+                                      <p class="post-description" style="text-align:left;margin-left:0px ;">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div> 
+                          <div class="col-md-4">
+                              <div id="news-slider14" class="owl-carousel">
+                                  <div class="post-slide14">
+                                          <h3 class="post-category"><a href="#">Amity University Rajasthan</a></h3>
+                                      <div class="post-review">
+                                          <div class="post-bar">
+                                              <span class="month">nov</span>
+                                              <span class="date">5</span>
+                                          </div>
+                                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                      </div>
+                                      <div class="post-img">
+                                          <center>
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
+                                          </center>
+                                      </div>
+                                      <p class="post-description" style="text-align:left;margin-left:0px ;">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div> 
+                          <div class="col-md-4">
+                              <div id="news-slider14" class="owl-carousel">
+                                  <div class="post-slide14">
+                                          <h3 class="post-category"><a href="#">Amity University Rajasthan</a></h3>
+                                      <div class="post-review">
+                                          <div class="post-bar">
+                                              <span class="month">nov</span>
+                                              <span class="date">5</span>
+                                          </div>
+                                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                                      </div>
+                                      <div class="post-img">
+                                          <center>
+                                          <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
+                                          </center>
+                                      </div>
+                                      <p class="post-description" style="text-align:left;margin-left:0px ;">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div> 
+                          
+                          
+                      </div>
+                      </div>
+                  <div class="uk-section uk-section-secondary uk-light " >
+                    <div uk-grid>
+                        <div class="uk-align-left uk-margin-top">
+                           <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+            
+                        </div>
+                       <div >
+                      <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+                        <ul style="list-style-type: none; " class="uk-margin-top ">
+                            
+                            <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html" style="text-decoration: none;">Alumni</a></li>
+                            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a href="gallery.html"style="text-decoration: none;">Gallery</a></li>
+                            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="news.html"style="text-decoration: none;">News</a></li>
+                            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" ><a href="Story.html" style="text-decoration: none;">Stories</a></li>
+                            <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="aboutus.html"style="text-decoration: none;">About Us</a></li>
+                        </ul>
+                        </div>
+                        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
+                      
+                        <!-- TODO: Add SDKs for Firebase products that you want to use
+                             https://firebase.google.com/docs/web/setup#available-libraries -->
+                      
+                        <script>
+                          // Your web app's Firebase configuration
+                          var firebaseConfig = {
+                            apiKey: "AIzaSyD0lotM6kyH6o8wcDx-RjLcuVNvGAWKTVE",
+                            authDomain: "alumni-24c48.firebaseapp.com",
+                            databaseURL: "https://alumni-24c48.firebaseio.com",
+                            projectId: "alumni-24c48",
+                            storageBucket: "alumni-24c48.appspot.com",
+                            messagingSenderId: "734371845562",
+                            appId: "1:734371845562:web:5fc4bd8fa9fec40d6cf983"
+                          };
+                          // Initialize Firebase
+                          firebase.initializeApp(firebaseConfig);
+                        </script>           
+                        <script>
+                        function call_news(){
+    var db=firebase.database();
+    db.ref('/News/').on('child_added',function(data1){
+        db.ref('/News/'+data1.key).on('value',function(data){
+            var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        var name=data.val().Name;
+        var day=data.val().date;
+        let day1=day.split("/");
+        let month1=day1[0];
+        let day3=day1[1];
+        let year=day1[2]
+        var dec=data.val().description;
+        var locate=data.val().location;
+            var url=data.val().photo;
+        document.getElementById('news').innerHTML=document.getElementById('news').innerHTML+ '<div class="col-md-4" >'+
+    
+    '<div class="post-slide14">'+
+            '<h3 class="post-category"><a href="#">'+locate+'</a></h3>'+
+            '<div class="post-review">'+
+                '<div class="post-bar">'+
+                    '<span class="month">'+mS[month1-1]+'</span>'+
+                '<span class="date">'+day3+'</span>'+
+                '</div>'+
+            '<h3 class="post-title"><a href="#">'+name+'</a></h3>'+
+            '</div>'+
+        '<center>'+
+                    '<img src="'+url+'" alt="">'+
+            '</center>'+
+            '</div>'+
+        '<p class="post-description">'+
+            dec
+            '</p>'+
+        '</div>'+
+    '</div>';
+        });
+    });
+    }
+                        </script>
+</body>
+</html>

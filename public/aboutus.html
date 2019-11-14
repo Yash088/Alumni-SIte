@@ -1,265 +1,236 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- UIkit CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <style>
-   .content{
-             margin-top:80px !important;
-    }
-    .leaders{
-      margin-left:230px;
-    }
-    .show{
-      display: none !important;
-    }
-    @media only screen and (max-width: 1024px) {
+.small_left{
+                margin-left:18px;
+              }
+              @media only screen and (max-width: 640px) {
+                .vsmall_left{
+                margin-left:8px;
+              }
+              }
+@media only screen and (max-width: 600px) {
         .content{
-            margin-top:80px !important;
+            margin-left:30px !important;
         }
-        .hide{
-          display:none !important;
+        .adjust{
+            margin-left:-50px !important;
         }
-        .show{
-          display:flex !important;
-        }
-    }
-    </style>
- 
+}
 </style>
 </head>
 <body>
-        <script>
-                AOS.init({
-                    duration:1000
-                });
-            </script>
-      <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
-          <ul style="list-style-type: none;padding:5px;">
-            
-            <li style="float:right; margin-right:15px;"><a style="text-decoration: none;color:white;" href="admin_login.html">Admin Panel</a></li>
-            <li style="float:left;"><a style="text-decoration: none;" href="Story.html"><h4 style="color:white">Stroies</h4></a></li>
-            <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
-      
-      
-          </ul>
-      
-        </div>
-      
-        <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
-          <div class=" uk-navbar-left " style="overflow:hidden">
-            <ul class="uk-navbar-nav">
-              <li>
-                <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
-              <li><a style="color:#1a275b !important;font-size:12px;" href="Story.html">Alumni Stories</a></li>
-              <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Message From VC</a></li> -->
-              <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Dashboard</a></li>
-              <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
-      
-            </ul>
-          </div>
-          <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
-            <li style="list-style-type: none;">
-              <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
-            </li>
-      
-          </div>
-          <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
-            <ul class="uk-navbar-nav ">
-              <!-- <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li> -->
-              <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
-              <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
-              <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
-      
-            </ul>
-          </div>
-      
-      
-        </nav>
-        <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
-          <div>
-              <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
-          </div>
-          <div class="uk-navbar-right">
-               
-      
-                  <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
-                               style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+        <div class="uk-visible@m"style="background-color:#153373; border:1px solid transparent;height:40px;overflow:hidden ">
+                <ul style="list-style-type: none;padding:5px;">
                   
-          </div>
-        </div>
-      
-      
-                   
-         <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-                      <div class="uk-offcanvas-bar">
-          
-                          <ul class="uk-nav uk-nav-default">
-                              <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <li class="uk-active"><a href="#">Login</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <!-- <li class="uk-active"><a href="first.html">Message from VC</a></li>
-                              <li class="uk-nav-divider"></li> -->
-                               <li class="uk-active"><a href="admin_login.html">Admin Login</a></li>
-                              <li class="uk-nav-divider"></li> 
-                              <li class="uk-active"><a href="#">Feedback</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
-                              <li class="uk-nav-divider"></li> -->
-                              <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <li class="uk-active"><a href="first.html">Events </a></li>
-                              <li class="uk-nav-divider"></li>
-                              <li class="uk-active"><a href="news1.html">News Room</a></li>
-                              <li class="uk-nav-divider"></li>
-                              <!-- <li class="uk-active"><a href="#">Group Members</a></li>
-                              <li class="uk-nav-divider"></li> -->
-                          </ul>
-          
-                      </div>
-                  
-                    </div>
-     
-    
-    
-    
-    <div>
+                  <li style="float:right; margin-right:15px;"><a style="text-decoration: none;color:white;" href="admin_login.html">Admin Panel</a></li>
+                  <li style="float:left;"><a style="text-decoration: none;" href="Story.html"><h4 style="color:white">Stroies</h4></a></li>
+                  <li style="float:right;margin-right:15px;"><a style="text-decoration: none;">login button</a></li>
             
-                <div class="uk-flex uk-flex-wrap uk-margin-xlarge-top">
-                        <div  data-aos="fade-up"
-                        class="uk-width-1-3 uk-card  uk-card-body uk-card-small uk-margin-large-left uk-height-large">
-                        <img src="https://www.amity.edu/jaipur/images/amity_jaipur_img.jpg" class="uk-width-large uk-height-medium uk-margin-small-left">
-                        </div>
-                        <div  data-aos="fade-left"
-                            class="uk-width-1-2 uk-card uk-card-body uk-card-small uk-margin-large-left uk-height-medium uk-margin-medium-top">
-                        <h2 class="uk-heading uk-position-top-center uk-margin-medium-top">Our Mission</h2><hr class="uk-divider">
-                        <p class="content">To establish world class platform for creation of knowledge through quality research and its dissemination through technologically enabled teaching - learning pedagogy in the field of science, technology, engineering, arts and management. To become a catalyst in the societal and national development, by ensuring continuous interaction with industry and other academic and research institutions in India and abroad.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="uk-flex uk-flex-wrap uk-margin-xlarge-top">
-                           <div  data-aos="fade-right"
-                                class="uk-width-1-2 uk-card  uk-card-body uk-card-small uk-margin-large-left uk-height-medium uk-margin-medium-top">
-                            <h2 class="uk-heading uk-position-top-center uk-margin-small-top">Our Vision</h2><hr class="uk-divider">
-                        
-                            <p class="uk-margin-medium-top  uk-align-justify content" >To offer state of the art undergraduate Programmes in IT & ITES as well as core disciplines with emphasis on strong fundamentals
-                              To establish centers of excellence in emerging areas to provide significant breakthrough required to solve real world problems
-                              To make The Amity as the most preferred institute for higher education across the country
-                              To create intellectual property through innovations, quality research publications and patents
-                              To instill core values of excellence, integrity, teamwork, professional ethics and environmental concerns
-                              To foster and nurture leadership and entrepreneurial qualities and lifelong learning amongst students, research scholars, faculty and staff of The Amity</p>
-                            </div>
-                        
-                            <div  data-aos="fade-down"
-                            class="uk-width-1-3 uk-card  uk-card-body uk-card-small uk-margin-large-left uk-height-large">
-                            <img src="https://www.amity.edu/backoffice/Uploads/photogallery/294lig_Jaipur.jpg" class="uk-width-large uk-height-medium uk-margin-small-left">
-                            </div>
-                            </div>
-                            <div class="uk-flex uk-flex-wrap uk-margin-xlarge-top">
-                                    <div  data-aos="fade-up"
-                                    class="uk-width-1-3 uk-card  uk-card-body uk-card-small uk-margin-large-left uk-height-large">
-                                    <img src="https://www.amity.edu/backoffice/uploads/HomeBanner/3fblg_jaipur.jpg" class="uk-width-large uk-height-medium uk-margin-small-left">
-                                    </div>
-                                    <div  data-aos="fade-left"
-                                        class="uk-width-1-2 uk-card uk-card-body uk-card-small uk-margin-large-left uk-height-medium uk-margin-medium-top">
-                                    <h2 class="uk-heading uk-position-top-center uk-margin-medium-top">How we started</h2><hr class="uk-divider">
-                                    <p class="content">To establish world class platform for creation of knowledge through quality research and its dissemination through technologically enabled teaching - learning pedagogy in the field of science, technology, engineering, arts and management. To become a catalyst in the societal and national development</p>
-                                    </div>
-                                    </div>
-                                </div>
-                        </div>
             
-    </div>
-    <h4 class="uk-margin-large-top"style="font-family: 'Montserrat', sans-serif;font-size:28px;letter-spacing:1.44px;line-height:21.6px;color: #484848"><b>Our Leaders</b><hr class="uk-divider-small" ><h4>
-
-    <hr class="uk-divider">
-        <div class="uk-flex  uk-flex-center uk-margin-large-top ">
-          <div class="uk-card uk-card-body">
-            <img class="uk-border-circle"
-            src="https://www.amity.edu/jaipur/images/ashok_chauhan.jpg"
-            width="150" height="150" alt="Border circle">
-            <h2 style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">DR. ASHOK K CHAUHAN
-              </h2>
-            <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Founder President
-
-
-              </p>
-          </div>
-                        <div class="uk-card uk-card-body ">
-                            <img class="uk-border-circle"
-                                src="https://www.amity.edu/jaipur/images/aseem.jpg"
-                                width="150" height="150" alt="Border circle">
-                                <h2 style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">DR. ASEEM CHAUHAN
-                                  </h2>
-                            <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Chancellor - Amity University, Rajasthan
-
-
-                              </p> 
-                              </div>
-                              <div class="uk-card uk-card-body ">
-                                
-                                <img class="uk-border-circle"
-                                src="https://www.amity.edu/jaipur/images/arun-patil.jpg"
-                                width="150" height="150" alt="Border circle" >
-                              
-                                <h2 style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">PROF. ARUN PATIL</h2>
-                                                                <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">President / Vice Chancellor of Amity University, Rajasthan
-                                  </p> 
-                              </div>
-                            </div>
-                            <div class="uk-section uk-section-secondary uk-light uk-margin-large-top">
-                              <div uk-grid>
-                                <div class="uk-align-left uk-margin-top">
-                                  <img class="uk-margin-left" src="https://amity.edu/images/logo.png" height="120px" width="250px">
-                                  
-                                </div>
-                                <div>
-                                  <center>
-                                    <h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">
-                                        UNIVERSITY</h6>
-                                      </center>
-                                      <ul style="list-style-type: none; " class="uk-margin-top">
-                                          
-                  <li
-                  style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-                    class="uk-margin-left">Alumni</li>
-                  <li
-                    style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-                    class="uk-margin-left">Gallery</li>
-                    <li
-                    style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-                    class="uk-margin-left">Events</li>
-                    <li
-                    style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-                    class="uk-margin-left">Stories</li>
-                  <li
-                    style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"
-                    class="uk-margin-left">Dashboard</li>
                 </ul>
+            
               </div>
-        
-              <div class="uk-align-right uk-margin-top" data-aos="zoom-in">
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="google"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="linkedin"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="instagram"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="twitter"></span>
-                <span class="uk-margin-small-right uk-icon-button" uk-icon="facebook"></span>
+            
+              <nav class=" uk-navbar-container uk-visible@m" style="height:70px;" uk-navbar>
+                <div class=" uk-navbar-left " style="overflow:hidden">
+                  <ul class="uk-navbar-nav">
+                    <li>
+                      <a style="color:#1a275b !important;font-size:12px;" href="aboutus.html">About Us</a></li>
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="Story.html">Alumni Stories</a></li>
+                    <!-- <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Message From VC</a></li> -->
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="first.html">Dashboard</a></li>
+                    <!-- <li class="uk-active"><a href="#">Student Testimonials</a></li> -->
+            
+                  </ul>
+                </div>
+                <div class="uk-navbar-center  " style="margin-top:-16px;overflow:hidden">
+                  <li style="list-style-type: none;">
+                    <img src="Images/logo.jpeg" style="z-index: -1;" class="uk-box-shadow-large logo">
+                  </li>
+            
+                </div>
+                <div class=" uk-navbar-right uk-visible@m" style="overflow:hidden">
+                  <ul class="uk-navbar-nav ">
+                    <!-- <li><a style="color:#1a275b !important; font-size:12px;" href="Story.html">Alumni Stories</a></li> -->
+                    <li><a style="color:#1a275b !important;font-size:12px;" onclick="gallery.html">Gallery</a></li>
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="contactus.html">Contact Us</a></li>
+                    <li><a style="color:#1a275b !important;font-size:12px;" href="news1.html">News</a></li>
+            
+                  </ul>
+                </div>
+            
+            
+              </nav>
+              <div class=" uk-hidden@m" style="background-color:#153373;"uk-navbar>
+                <div>
+                    <img src="Images/logo.jpeg"  height="40px" width="40px"class="uk-box-shadow-large">
+                </div>
+                <div class="uk-navbar-right">
+                     
+            
+                        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav"
+                                     style=" border: none;"><span uk-icon="icon: menu" style="color: white;"></span></button>
+                        
+                </div>
               </div>
-            </div>
-          </div>
+            
+            
+                         
+               <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                            <div class="uk-offcanvas-bar">
+                
+                                <ul class="uk-nav uk-nav-default">
+                                    <li class="uk-active" ><a href="aboutus.html">About Us</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-active"><a href="#">Login</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="first.html">Message from VC</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                     <li class="uk-active"><a href="admin_login.html">Admin Login</a></li>
+                                    <li class="uk-nav-divider"></li> 
+                                    <li class="uk-active"><a href="#">Feedback</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-active"><a href="contactus.html">Contact Us</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="#">Job Openings</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                    <li class="uk-active"><a href="gallery.html">Photo Gallery</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-active"><a href="first.html">Events </a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-active"><a href="news1.html">News Room</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li class="uk-active"><a href="#">Group Members</a></li>
+                                    <li class="uk-nav-divider"></li> -->
+                                </ul>
+                
+                            </div>
+                        
+                          </div> 
+                          <div class="uk-grid uk-child-width-expand@s uk-margin-large-top">
+                                <div  data-aos="fade-up" 
+                                class=" uk-card  uk-card-body   uk-margin-medium-left">
+                                <img src="https://www.amity.edu/backoffice/uploads/HomeBanner/3fblg_jaipur.jpg" class="uk-width-large uk-height-medium ">
+                                </div>
+                                <div  data-aos="fade-left"
+                                    class=" uk-card uk-card-body  uk-margin-medium-right@m  uk-align-center@s  uk-margin-medium-top">
+                                <h2 class="uk-heading uk-position-top-center ">Our Mission</h2><hr class="uk-divider">
+                                <p class="content">To establish world class platform for creation of knowledge through quality research and its dissemination through technologically enabled teaching - learning pedagogy in the field of science, technology, engineering, arts and management. To become a catalyst in the societal and national development, by ensuring continuous interaction with industry and other academic and research institutions in India and abroad.</p>
+                            </div>
+                                </div>
+                                <div class="uk-grid uk-child-width-expand@s">
+                                    <div  data-aos="fade-left"
+                                    class=" uk-card uk-card-body  uk-margin-medium-left@m  uk-align-center@s  uk-margin-medium-top">
+                                    <h2 class="uk-heading uk-position-top-center ">Our Vision</h2><hr class="uk-divider">
+                                    <p class="content">To offer state of the art undergraduate Programmes in IT & ITES as well as core disciplines with emphasis on strong fundamentals
+                                            To establish centers of excellence in emerging areas to provide significant breakthrough required to solve real world problems
+                                            To make The Amity as the most preferred institute for higher education across the country
+                                            To create intellectual property through innovations, quality research publications and patents
+                                            To instill core values of excellence, integrity, teamwork, professional ethics and environmental concerns
+                                            To foster and nurture leadership and entrepreneurial qualities and lifelong learning amongst students, research scholars, faculty and staff of The Amity</p>
+                                </div>
+                                <div  data-aos="fade-up" 
+                                class=" uk-card  uk-card-body   uk-margin-medium-right@m content">
+                                <img src="https://www.amity.edu/backoffice/Uploads/photogallery/294lig_Jaipur.jpg" class="uk-width-large uk-height-medium ">
+                                </div>
+                                        </div>
+                          
+
+
+                                            <div class="uk-grid uk-child-width-expand@s">
+                                                    <div  data-aos="fade-up" 
+                                                    class=" uk-card  uk-card-body   uk-margin-medium-left">
+                                                    <img src="https://www.amity.edu/backoffice/uploads/HomeBanner/3fblg_jaipur.jpg" class="uk-width-large uk-height-medium ">
+                                                    </div>
+                                                    <div  data-aos="fade-left"
+                                                        class=" uk-card uk-card-body  uk-margin-medium-right@m  uk-align-center@s  uk-margin-medium-top">
+                                                    <h2 class="uk-heading uk-position-top-center ">How we started</h2><hr class="uk-divider">
+                                                    <p class="content">To establish world class platform for creation of knowledge through quality research and its dissemination through technologically enabled teaching - learning pedagogy in the field of science, technology, engineering, arts and management. To become a catalyst in the societal and national development</p>
+                                                    </div>
+                                                    </div>
+                                                
+                    
+                    <h4 class="uk-margin-large-top"style="font-family: 'Montserrat', sans-serif;font-size:28px;letter-spacing:1.44px;line-height:21.6px;color: #484848"><b>Our Leaders</b><hr class="uk-divider-small" ><h4>
+                
+                    <hr class="uk-divider">
+                        <div class="uk-flex   uk-flex-wrap uk-child-width-expand@s uk-margin-large-top " >
+                          <div class=" uk-card-body uk-flex-left" >
+                            <img class="uk-border-circle"
+                            src="https://www.amity.edu/jaipur/images/ashok_chauhan.jpg"
+                            width="150" height="150" alt="Border circle">
+                            <h2 class="uk-margin-top"style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">DR. ASHOK K CHAUHAN
+                              </h2>
+                            <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Founder President
+                
+                
+                              </p>
+                          </div>
+                          <div class=" uk-card-body uk-flex-center" >
+                            <img class="uk-border-circle"
+                            src="https://www.amity.edu/jaipur/images/aseem.jpg"
+                            width="150" height="150" alt="Border circle">
+                            <h2 class="uk-margin-top" style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">DR. ASEEM CHAUHAN
+                              </h2>
+                            <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Chancellor - Amity University, Rajasthan
+                
+                
+                              </p>
+                          </div>
+                          <div class=" uk-card-body uk-flex-right" >
+                            <img class="uk-border-circle"
+                            src="https://www.amity.edu/jaipur/images/arun-patil.jpg"
+                            
+                            width="150" height="150" alt="Border circle">
+                            <h2 class="uk-margin-top" style="color:black;font-size:24px;font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">PROF. ARUN PATIL
+                              </h2>
+                            <p style="color:#191919;font-size:16px;font-weight: 600; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">President / Vice Chancellor of Amity University, Rajasthan
+                
+                
+                              </p>
+                          </div>
+                          </div>
+                          
+                          <div class="uk-section uk-section-secondary uk-light" style="margin-bottom:0px !important;" >
+                                <div uk-grid>
+                                    <div class="uk-align-left uk-margin-top">
+                                       <img class="uk-margin-left"src="https://amity.edu/images/logo.png" height="120px" width="250px"  >
+                        
+                                    </div>
+                                   <div >
+                                  <center><h6 style="font-family:'Open Sans', Helvetica, Arial, sans-serif ;font-size: 18px;font-weight: 700;">UNIVERSITY</h6> </center>
+                                    <ul style="list-style-type: none; " class="uk-margin-top ">
+                                        
+                                        <li style="float:left; font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="first.html" style="text-decoration: none;">Alumni</a></li>
+                                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a href="gallery.html"style="text-decoration: none;">Gallery</a></li>
+                                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left"><a href="news1.html"style="text-decoration: none;">News</a></li>
+                                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;" class="small_left vsmall_left" ><a href="Story.html" style="text-decoration: none;">Stories</a></li>
+                                        <li style="float:left;font-family: 'Open Sans', Helvetica, Arial, sans-serif ;font-size: 14px;font-weight: 400;"class="small_left vsmall_left"><a herf="aboutus.html" style="text-decoration: none;">About Us</a></li>
+                                    </ul>
+                                    </div>
+                                           
+                                                
 </body>
-    </html>
+</html>
